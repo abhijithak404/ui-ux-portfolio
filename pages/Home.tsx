@@ -44,10 +44,10 @@ const TypewriterText: React.FC<{ text: string; className?: string }> = ({ text, 
 };
 
 // Feature Explorer Text Item
-const FeatureTextItem: React.FC<{ 
-  project: Project; 
+const FeatureTextItem: React.FC<{
+  project: Project;
   isActive: boolean;
-  onActivate: () => void; 
+  onActivate: () => void;
 }> = ({ project, isActive, onActivate }) => {
   const ref = useRef(null);
   // Trigger when element is exactly in the center of the viewport
@@ -60,13 +60,12 @@ const FeatureTextItem: React.FC<{
   }, [isInView, onActivate]);
 
   return (
-    <div 
-      ref={ref} 
-      className={`pl-8 border-l-4 transition-all duration-500 ease-in-out py-10 ${
-        isActive 
-          ? 'border-slate-900 dark:border-white opacity-100' 
-          : 'border-slate-200 dark:border-slate-800 opacity-30 blur-[1px]'
-      }`}
+    <div
+      ref={ref}
+      className={`pl-8 border-l-4 transition-all duration-500 ease-in-out py-10 ${isActive
+        ? 'border-slate-900 dark:border-white opacity-100'
+        : 'border-slate-200 dark:border-slate-800 opacity-30 blur-[1px]'
+        }`}
     >
       <span className="block text-sm font-bold uppercase tracking-wider mb-3 text-slate-500">
         0{PROJECTS.indexOf(project) + 1}
@@ -79,22 +78,22 @@ const FeatureTextItem: React.FC<{
       </p>
 
       {/* Mobile/Tablet Thumbnail - Shows below text on smaller screens */}
-      <motion.div 
+      <motion.div
         className="lg:hidden w-full mb-8 rounded-2xl overflow-hidden shadow-lg"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <img 
-          src={project.thumbnail} 
-          alt={project.title} 
+        <img
+          src={project.thumbnail}
+          alt={project.title}
           className="w-full h-auto object-cover"
         />
       </motion.div>
 
       <div className={`overflow-hidden transition-all duration-500 ${isActive ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'}`}>
-        <Link 
+        <Link
           to={`/project/${project.id}`}
           className="inline-flex items-center gap-3 text-lg font-bold border-b-2 border-slate-900 dark:border-white pb-1 text-slate-900 dark:text-white hover:opacity-70 transition-opacity"
         >
@@ -112,51 +111,50 @@ const FeatureExplorerShowcase: React.FC = () => {
   return (
     <section id="work" className="relative max-w-[1440px] mx-auto border-t border-slate-200 dark:border-slate-800">
       <div className="flex flex-col lg:flex-row">
-        
+
         {/* Left Column - Scrolling List */}
         <div className="w-full lg:w-1/2 px-6 md:px-12 pt-[15vh] pb-[20vh] lg:pt-[20vh] lg:pb-[40vh]">
-           <div className="mb-[10vh] lg:mb-[15vh]">
-             <span className="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block uppercase tracking-wider mb-4">
-               Selected Works
-             </span>
-             <h2 className="text-5xl md:text-7xl font-display font-bold text-slate-900 dark:text-white leading-tight">
-                Featured <br/> Capabilities
-             </h2>
-           </div>
+          <div className="mb-[10vh] lg:mb-[15vh]">
+            <span className="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block uppercase tracking-wider mb-4">
+              Selected Works
+            </span>
+            <h2 className="text-5xl md:text-7xl font-display font-bold text-slate-900 dark:text-white leading-tight">
+              Featured <br /> Capabilities
+            </h2>
+          </div>
 
-           {/* Gap handles spacing between items */}
-           <div className="flex flex-col gap-24 lg:gap-[60vh]"> 
-              {PROJECTS.map((project) => (
-                <FeatureTextItem 
-                  key={project.id} 
-                  project={project} 
-                  isActive={activeId === project.id}
-                  onActivate={() => setActiveId(project.id)}
-                />
-              ))}
-           </div>
+          {/* Gap handles spacing between items */}
+          <div className="flex flex-col gap-24 lg:gap-[60vh]">
+            {PROJECTS.map((project) => (
+              <FeatureTextItem
+                key={project.id}
+                project={project}
+                isActive={activeId === project.id}
+                onActivate={() => setActiveId(project.id)}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Right Column - Sticky Image Pinning (Desktop Only) */}
         <div className="hidden lg:flex w-1/2 sticky top-0 h-screen items-center justify-center p-12">
-           <div className="relative w-full aspect-square max-w-xl">
-              {PROJECTS.map((project) => (
-                <div 
-                  key={project.id}
-                  className={`absolute inset-0 transition-all duration-700 ease-out flex items-center justify-center ${
-                    activeId === project.id 
-                      ? 'opacity-100 translate-y-0 scale-100 z-10' 
-                      : 'opacity-0 translate-y-10 scale-95 z-0'
+          <div className="relative w-full aspect-square max-w-xl">
+            {PROJECTS.map((project) => (
+              <div
+                key={project.id}
+                className={`absolute inset-0 transition-all duration-700 ease-out flex items-center justify-center ${activeId === project.id
+                  ? 'opacity-100 translate-y-0 scale-100 z-10'
+                  : 'opacity-0 translate-y-10 scale-95 z-0'
                   }`}
-                >
-                  <img 
-                    src={project.thumbnail} 
-                    alt={project.title}
-                    className="w-full h-full object-cover rounded-[2rem] shadow-2xl"
-                  />
-                </div>
-              ))}
-           </div>
+              >
+                <img
+                  src={project.thumbnail}
+                  alt={project.title}
+                  className="w-full h-full object-cover rounded-[2rem] shadow-2xl"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>
@@ -189,12 +187,12 @@ export const Home: React.FC = () => {
   return (
     // IMPORTANT: removed 'overflow-hidden' from main to allow sticky positioning to work
     <main className="bg-white dark:bg-dark-950">
-      
+
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 md:pt-48 md:pb-32 px-4 md:px-8 max-w-[1440px] mx-auto min-h-screen flex flex-col justify-center overflow-hidden">
         <Particles />
         <div className="relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -207,43 +205,43 @@ export const Home: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mt-12">
-             <div className="hidden md:block md:col-span-1"></div>
-             
-             {/* Description Text */}
-             <div className="md:col-span-5 pt-8">
-                {/* Brand Logos */}
-                <div className="flex flex-wrap gap-4 mb-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                  {BRANDS.map((brand, i) => (
-                    <div key={i} className="px-4 py-2 bg-slate-100 dark:bg-slate-900 rounded-full text-sm font-bold text-slate-500 flex items-center gap-2">
-                       {brand.name}
-                    </div>
-                  ))}
-                </div>
-                <p className="text-xl md:text-2xl font-light text-slate-600 dark:text-slate-300 max-w-sm leading-relaxed">
-                   Crafting digital experiences that merge functionality with aesthetic perfection.
-                </p>
-             </div>
+            <div className="hidden md:block md:col-span-1"></div>
 
-             {/* Hero Image */}
-             <div className="md:col-span-6 relative">
-               <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                  className="relative aspect-[4/5] md:aspect-square w-full max-w-md ml-auto rounded-[3rem] overflow-hidden shadow-2xl"
-               >
-                 <img 
-                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop" 
-                   alt="Product Designer" 
-                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
-                 />
-                 <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-3xl text-white">
-                   <p className="font-medium text-lg">
-                     Hi, I'm Duwy. Creating intuitive digital experiences for global brands.
-                   </p>
-                 </div>
-               </motion.div>
-             </div>
+            {/* Description Text */}
+            <div className="md:col-span-5 pt-8">
+              {/* Brand Logos */}
+              <div className="flex flex-wrap gap-4 mb-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                {BRANDS.map((brand, i) => (
+                  <div key={i} className="px-4 py-2 bg-slate-100 dark:bg-slate-900 rounded-full text-sm font-bold text-slate-500 flex items-center gap-2">
+                    {brand.name}
+                  </div>
+                ))}
+              </div>
+              <p className="text-xl md:text-2xl font-light text-slate-600 dark:text-slate-300 max-w-sm leading-relaxed">
+                Crafting digital experiences that merge functionality with aesthetic perfection.
+              </p>
+            </div>
+
+            {/* Hero Image */}
+            <div className="md:col-span-6 relative">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative aspect-[4/5] md:aspect-square w-full max-w-md ml-auto rounded-[3rem] overflow-hidden shadow-2xl"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop"
+                  alt="Product Designer"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                />
+                <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-3xl text-white">
+                  <p className="font-medium text-lg">
+                    Hi, I'm Duwy. Creating intuitive digital experiences for global brands.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -252,20 +250,20 @@ export const Home: React.FC = () => {
       <section className="py-12 bg-slate-900 dark:bg-white text-white dark:text-slate-900 overflow-hidden transform -rotate-1 origin-left scale-105">
         <div className="flex overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap">
-              {[...SKILLS, ...SKILLS, ...SKILLS].map((skill, i) => (
-                 <div key={i} className="flex items-center gap-4 mx-8 text-4xl font-display font-bold uppercase opacity-80 hover:opacity-100 transition-opacity">
-                    <span className="w-3 h-3 rounded-full bg-current"></span>
-                    {skill.name}
-                 </div>
-              ))}
+            {[...SKILLS, ...SKILLS, ...SKILLS].map((skill, i) => (
+              <div key={i} className="flex items-center gap-4 mx-8 text-4xl font-display font-bold uppercase opacity-80 hover:opacity-100 transition-opacity">
+                <span className="w-3 h-3 rounded-full bg-current"></span>
+                {skill.name}
+              </div>
+            ))}
           </div>
-           <div className="flex animate-marquee whitespace-nowrap" aria-hidden="true">
-              {[...SKILLS, ...SKILLS, ...SKILLS].map((skill, i) => (
-                 <div key={i} className="flex items-center gap-4 mx-8 text-4xl font-display font-bold uppercase opacity-80 hover:opacity-100 transition-opacity">
-                    <span className="w-3 h-3 rounded-full bg-current"></span>
-                    {skill.name}
-                 </div>
-              ))}
+          <div className="flex animate-marquee whitespace-nowrap" aria-hidden="true">
+            {[...SKILLS, ...SKILLS, ...SKILLS].map((skill, i) => (
+              <div key={i} className="flex items-center gap-4 mx-8 text-4xl font-display font-bold uppercase opacity-80 hover:opacity-100 transition-opacity">
+                <span className="w-3 h-3 rounded-full bg-current"></span>
+                {skill.name}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -276,9 +274,9 @@ export const Home: React.FC = () => {
           <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
             About Me
           </span>
-          
+
           {/* Typewriter Effect Header */}
-          <TypewriterText 
+          <TypewriterText
             text="DDesign has always been more than just a job – it's my passion."
             className="text-4xl md:text-6xl font-display font-medium text-slate-900 dark:text-white max-w-3xl leading-tight min-h-[1.2em]"
           />
@@ -286,10 +284,10 @@ export const Home: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative rounded-[2.5rem] overflow-hidden group cursor-pointer">
-            <img 
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop" 
-              alt="Working" 
-              className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105" 
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
+              alt="Working"
+              className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
               <div className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center pl-1 transition-transform group-hover:scale-90 border border-white/30">
@@ -302,7 +300,7 @@ export const Home: React.FC = () => {
             <p className="text-xl font-light text-slate-600 dark:text-slate-300">
               Design is not just a job for me, it's a passion that drives me. I believe that good design can solve problems and make people's lives easier.
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
               <div>
                 <h3 className="text-6xl font-display font-bold text-slate-900 dark:text-white mb-2">+320</h3>
@@ -342,13 +340,12 @@ export const Home: React.FC = () => {
           <div className="lg:col-span-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {SERVICES.map((service, index) => (
-                <div 
+                <div
                   key={index}
-                  className={`p-10 rounded-[2rem] flex flex-col justify-between min-h-[320px] group transition-all duration-300 ${
-                    service.highlight 
-                      ? 'bg-slate-900 text-white' 
-                      : 'bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800'
-                  }`}
+                  className={`p-10 rounded-[2rem] flex flex-col justify-between min-h-[320px] group transition-all duration-300 ${service.highlight
+                    ? 'bg-slate-900 text-white'
+                    : 'bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800'
+                    }`}
                 >
                   <div>
                     <h3 className={`text-2xl font-bold mb-4 ${service.highlight ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
@@ -359,10 +356,9 @@ export const Home: React.FC = () => {
                     </p>
                   </div>
                   <div className="flex justify-end mt-4">
-                    <span className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                        service.highlight ? 'border-white/30 group-hover:bg-white group-hover:text-slate-900' : 'border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-slate-900'
-                    }`}>
-                        <ArrowRight className="w-5 h-5" />
+                    <span className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 ${service.highlight ? 'border-white/30 group-hover:bg-white group-hover:text-slate-900' : 'border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-slate-900'
+                      }`}>
+                      <ArrowRight className="w-5 h-5" />
                     </span>
                   </div>
                 </div>
@@ -375,41 +371,40 @@ export const Home: React.FC = () => {
       {/* NEW Detailed Skills Section */}
       <section className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
         <div className="mb-12 text-center md:text-left">
-           <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
-              Technical Proficiency
-           </span>
-           <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight">
-              Tools & Technologies <br/> I work with daily
-           </h2>
+          <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
+            Technical Proficiency
+          </span>
+          <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight">
+            Tools & Technologies <br /> I work with daily
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {SKILLS.map((skill, index) => (
-             <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="flex flex-col p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all duration-300"
-             >
-                <div className="flex justify-between items-start mb-4">
-                  <div className="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-900 dark:text-white">
-                     <Layout size={24} strokeWidth={1.5} />
-                  </div>
-                  <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${
-                    skill.level === 'Expert' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : 
-                    skill.level === 'Advanced' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' : 
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              className="flex flex-col p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              <div className="flex justify-between items-start mb-4">
+                <div className="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-900 dark:text-white">
+                  <Layout size={24} strokeWidth={1.5} />
+                </div>
+                <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${skill.level === 'Expert' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' :
+                  skill.level === 'Advanced' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
                     'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400'
                   }`}>
-                    {skill.level}
-                  </span>
-                </div>
-                <div>
-                   <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{skill.name}</h3>
-                   <p className="text-sm text-slate-500 dark:text-slate-400">{skill.category}</p>
-                </div>
-             </motion.div>
+                  {skill.level}
+                </span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">{skill.name}</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400">{skill.category}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -432,7 +427,7 @@ export const Home: React.FC = () => {
 
         <div className="space-y-4">
           {EXPERIENCE.map((exp, index) => (
-            <motion.div 
+            <motion.div
               key={exp.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -443,11 +438,11 @@ export const Home: React.FC = () => {
               <div className="mb-4 md:mb-0">
                 <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">{exp.role}</h3>
                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
-                    <span className="font-bold text-slate-900 dark:text-white">{exp.company}</span>
-                    <span className="hidden md:block w-1.5 h-1.5 rounded-full bg-slate-300"></span>
-                    <p className="text-slate-500 dark:text-slate-400 max-w-lg text-sm leading-relaxed">
+                  <span className="font-bold text-slate-900 dark:text-white">{exp.company}</span>
+                  <span className="hidden md:block w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+                  <p className="text-slate-500 dark:text-slate-400 max-w-lg text-sm leading-relaxed">
                     {exp.description}
-                    </p>
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-8 w-full md:w-auto justify-between md:justify-end">
@@ -473,18 +468,18 @@ export const Home: React.FC = () => {
                 Professional Work
               </span>
               <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight">
-                Selected works from <br/> my professional career
+                Selected works from <br /> my professional career
               </h2>
             </div>
             {/* Scroll Navigation Controls */}
             <div className="flex gap-4 mt-6 md:mt-0">
-              <button 
+              <button
                 onClick={() => scrollProjects('left')}
                 className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-900 dark:text-white"
               >
                 <ChevronLeft size={24} />
               </button>
-              <button 
+              <button
                 onClick={() => scrollProjects('right')}
                 className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-900 dark:text-white"
               >
@@ -492,48 +487,48 @@ export const Home: React.FC = () => {
               </button>
             </div>
           </div>
-          
-          <div 
+
+          <div
             ref={scrollRef}
             className="flex overflow-x-auto gap-8 pb-12 snap-x scrollbar-hide -mx-4 px-4 md:-mx-8 md:px-8"
           >
-              {JOB_PROJECTS.map((project, i) => (
-                  <div key={i} className="min-w-[85vw] md:min-w-[600px] snap-center">
-                      {/* Image Container */}
-                      <div className="group relative rounded-[2.5rem] overflow-hidden aspect-[16/9] mb-8 bg-slate-100 dark:bg-slate-900">
-                          <img 
-                              src={project.image} 
-                              alt={project.title} 
-                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                          />
-                          {/* Hover Overlay */}
-                          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                              <span className="px-6 py-3 bg-white/20 backdrop-blur-md rounded-full text-white font-bold border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                View Case Study
-                              </span>
-                          </div>
-                      </div>
-
-                      {/* Details Below Thumbnail */}
-                      <div className="flex justify-between items-start px-2">
-                          <div className="space-y-2">
-                              <p className="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                                {project.company} • {project.year}
-                              </p>
-                              <h3 className="text-3xl font-display font-bold text-slate-900 dark:text-white">
-                                {project.title}
-                              </h3>
-                              <p className="text-slate-600 dark:text-slate-300 max-w-md line-clamp-2 text-lg">
-                                {project.description}
-                              </p>
-                          </div>
-                          
-                          <div className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-900 dark:text-white group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-slate-900 transition-all duration-300">
-                              <ArrowUpRight className="w-5 h-5" />
-                          </div>
-                      </div>
+            {JOB_PROJECTS.map((project, i) => (
+              <div key={i} className="min-w-[85vw] md:min-w-[600px] snap-center">
+                {/* Image Container */}
+                <div className="group relative rounded-[2.5rem] overflow-hidden aspect-[16/9] mb-8 bg-slate-100 dark:bg-slate-900">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="px-6 py-3 bg-white/20 backdrop-blur-md rounded-full text-white font-bold border border-white/30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      View Case Study
+                    </span>
                   </div>
-              ))}
+                </div>
+
+                {/* Details Below Thumbnail */}
+                <div className="flex justify-between items-start px-2">
+                  <div className="space-y-2">
+                    <p className="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                      {project.company} • {project.year}
+                    </p>
+                    <h3 className="text-3xl font-display font-bold text-slate-900 dark:text-white">
+                      {project.title}
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-300 max-w-md line-clamp-2 text-lg">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  <div className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-900 dark:text-white group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-slate-900 transition-all duration-300">
+                    <ArrowUpRight className="w-5 h-5" />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -541,41 +536,41 @@ export const Home: React.FC = () => {
       {/* Auto-Rotating Testimonial Quote */}
       <section className="py-32 px-4 md:px-8 max-w-5xl mx-auto text-center relative min-h-[400px] flex flex-col justify-center">
         <div className="text-6xl md:text-8xl text-slate-200 dark:text-slate-800 font-serif leading-none mb-8 opacity-50">“</div>
-        
+
         <div className="relative overflow-hidden">
-             <AnimatePresence mode='wait'>
-                <motion.div
-                    key={currentTestimonial}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <h3 className="text-2xl md:text-4xl font-medium text-slate-900 dark:text-white italic leading-relaxed mb-12">
-                     "{TESTIMONIALS[currentTestimonial].quote}"
-                    </h3>
-                    
-                    <div className="flex items-center justify-center gap-4">
-                      <img src={TESTIMONIALS[currentTestimonial].image} alt="User" className="w-14 h-14 rounded-full object-cover ring-4 ring-slate-50 dark:ring-slate-900" />
-                      <div className="text-left">
-                        <h4 className="font-bold text-lg text-slate-900 dark:text-white">{TESTIMONIALS[currentTestimonial].author}</h4>
-                        <p className="text-sm text-slate-500 font-medium">{TESTIMONIALS[currentTestimonial].role}</p>
-                      </div>
-                    </div>
-                </motion.div>
-             </AnimatePresence>
+          <AnimatePresence mode='wait'>
+            <motion.div
+              key={currentTestimonial}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h3 className="text-2xl md:text-4xl font-medium text-slate-900 dark:text-white italic leading-relaxed mb-12">
+                "{TESTIMONIALS[currentTestimonial].quote}"
+              </h3>
+
+              <div className="flex items-center justify-center gap-4">
+                <img src={TESTIMONIALS[currentTestimonial].image} alt="User" className="w-14 h-14 rounded-full object-cover ring-4 ring-slate-50 dark:ring-slate-900" />
+                <div className="text-left">
+                  <h4 className="font-bold text-lg text-slate-900 dark:text-white">{TESTIMONIALS[currentTestimonial].author}</h4>
+                  <p className="text-sm text-slate-500 font-medium">{TESTIMONIALS[currentTestimonial].role}</p>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
-        
+
         {/* Testimonial Indicators */}
         <div className="flex justify-center gap-2 mt-8">
-            {TESTIMONIALS.map((_, i) => (
-                <button 
-                    key={i} 
-                    onClick={() => setCurrentTestimonial(i)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentTestimonial ? 'bg-slate-900 dark:bg-white w-6' : 'bg-slate-300 dark:bg-slate-700'}`}
-                    aria-label={`Go to testimonial ${i + 1}`}
-                />
-            ))}
+          {TESTIMONIALS.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentTestimonial(i)}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentTestimonial ? 'bg-slate-900 dark:bg-white w-6' : 'bg-slate-300 dark:bg-slate-700'}`}
+              aria-label={`Go to testimonial ${i + 1}`}
+            />
+          ))}
         </div>
       </section>
 
@@ -583,11 +578,11 @@ export const Home: React.FC = () => {
       <section id="contact" className="bg-slate-900 dark:bg-black py-24 px-4 md:px-8 relative overflow-hidden">
         {/* Background Accents */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
-        
+
         <div className="max-w-[1440px] mx-auto relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24">
             <h2 className="text-6xl md:text-[8rem] font-display font-bold text-white leading-[0.9] mb-8 md:mb-0 tracking-tighter">
-              Let's Connect <br/> There
+              Let's Connect <br /> There
             </h2>
             <a href={`mailto:alex.morgan@design.co`} className="flex items-center gap-4 px-10 py-5 bg-white rounded-full text-slate-900 hover:scale-105 transition-transform group font-bold text-lg">
               <span className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-slate-900 group-hover:text-white transition-colors">
@@ -599,53 +594,53 @@ export const Home: React.FC = () => {
 
           <div className="border-t border-white/10 pt-16 flex flex-col lg:flex-row justify-between items-start gap-12">
             <div className="flex flex-col gap-6">
-                 <div className="flex items-center gap-3 text-3xl font-display font-bold text-white">
-                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                        <span className="text-slate-900 text-xs font-bold">D</span>
-                    </div>
-                    Duwy
-                 </div>
-                 <p className="text-slate-400 max-w-sm">Creating digital products that help businesses reach their goals and inspire users.</p>
+              <div className="flex items-center gap-3 text-3xl font-display font-bold text-white">
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                  <span className="text-slate-900 text-xs font-bold">D</span>
+                </div>
+                Duwy
+              </div>
+              <p className="text-slate-400 max-w-sm">Creating digital products that help businesses reach their goals and inspire users.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-sm text-slate-400">
-               <div>
-                 <h4 className="font-bold text-white mb-6 text-lg">Address</h4>
-                 <p className="mb-2">Technology Park 7-12 Gumpang</p>
-                 <p>Recidance 57292 Surakarta Indonesia</p>
-               </div>
-               <div>
-                 <h4 className="font-bold text-white mb-6 text-lg">Email Address</h4>
-                 <p className="mb-2 hover:text-white transition-colors cursor-pointer">hallo@dewadewi.com</p>
-                 <p className="hover:text-white transition-colors cursor-pointer">taskeye@gmail.com</p>
-               </div>
-               <div>
-                 <h4 className="font-bold text-white mb-6 text-lg">Phone Number</h4>
-                 <p className="mb-2 hover:text-white transition-colors cursor-pointer">(0271) 131 4564 232</p>
-                 <p className="hover:text-white transition-colors cursor-pointer">082124720342342</p>
-               </div>
+              <div>
+                <h4 className="font-bold text-white mb-6 text-lg">Address</h4>
+                <p className="mb-2">Technology Park 7-12 Gumpang</p>
+                <p>Recidance 57292 Surakarta Indonesia</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-white mb-6 text-lg">Email Address</h4>
+                <p className="mb-2 hover:text-white transition-colors cursor-pointer">hallo@dewadewi.com</p>
+                <p className="hover:text-white transition-colors cursor-pointer">taskeye@gmail.com</p>
+              </div>
+              <div>
+                <h4 className="font-bold text-white mb-6 text-lg">Phone Number</h4>
+                <p className="mb-2 hover:text-white transition-colors cursor-pointer">(0271) 131 4564 232</p>
+                <p className="hover:text-white transition-colors cursor-pointer">082124720342342</p>
+              </div>
             </div>
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-center pt-12 mt-12 border-t border-white/5 text-sm text-slate-500">
-             <div className="flex gap-6 mb-6 md:mb-0">
-               <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
-                  <Instagram className="w-5 h-5" />
-               </div>
-               <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
-                  <Twitter className="w-5 h-5" />
-               </div>
-               <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
-                  <Youtube className="w-5 h-5" />
-               </div>
-             </div>
-             <div className="flex flex-wrap gap-8 justify-center">
-               <span className="hover:text-white cursor-pointer transition-colors">Templates</span>
-               <span className="hover:text-white cursor-pointer transition-colors">Tools</span>
-               <span className="hover:text-white cursor-pointer transition-colors">Features</span>
-               <span className="hover:text-white cursor-pointer transition-colors">About Us</span>
-             </div>
-             <p className="mt-6 md:mt-0">All rights reserved @Duwy</p>
+            <div className="flex gap-6 mb-6 md:mb-0">
+              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
+                <Instagram className="w-5 h-5" />
+              </div>
+              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
+                <Twitter className="w-5 h-5" />
+              </div>
+              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
+                <Youtube className="w-5 h-5" />
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-8 justify-center">
+              <span className="hover:text-white cursor-pointer transition-colors">Templates</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Tools</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Features</span>
+              <span className="hover:text-white cursor-pointer transition-colors">About Us</span>
+            </div>
+            <p className="mt-6 md:mt-0">All rights reserved @Duwy</p>
           </div>
         </div>
       </section>
