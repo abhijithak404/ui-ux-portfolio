@@ -8,6 +8,7 @@ export interface Project {
   images: string[];
   technologies: string[];
   link?: string;
+  figma?: string;
   challenge: string;
   solution: string;
 }
@@ -30,6 +31,7 @@ export interface JobProject {
     web?: string;
     ios?: string;
     android?: string;
+    figma?: string;
   };
 }
 

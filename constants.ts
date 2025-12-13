@@ -79,12 +79,13 @@ export const PROJECTS: Project[] = [
     category: "Mobile Application",
     summary: "A bold, futuristic e-commerce app that blends immersive visuals with a seamless shopping experience.",
     description: "Gamecore is a concept project focused on designing a modern e-commerce app for gaming products. The goal was to combine a futuristic visual style with an effortless shopping journey for players.",
-    thumbnail: "../Assets/gamecore.webp",
+    thumbnail: "Assets/gamecore.webp",
     images: [
       "Assets/gamecoe-img1.png",
       "Assets/gamecoe-img2.png"
     ],
     technologies: ["Figma", "Photoshop", "Illustrator"],
+    figma: "https://www.figma.com/design/xYAbDBHJYt4YAUpDJHVPA3/GameCore?node-id=0-1&t=DT4UVJVfU3DTfXmV-1",
     challenge: "To design a visually striking interface that reflects gaming culture while keeping the e-commerce experience intuitive and fast. Balancing style with usability was key.",
     solution: "The solution focused on creating a visually engaging yet highly functional shopping experience. A dark, futuristic theme with neon accents was combined with clear layouts and intuitive navigation, ensuring users could explore and purchase products effortlessly. Every interaction was designed to feel smooth, responsive, and true to the energy of gaming culture."
   },
@@ -100,6 +101,7 @@ export const PROJECTS: Project[] = [
       "Assets/DoPack-img2.webp"
     ],
     technologies: ["Figma", "Photoshop", "Illustrator"],
+    figma: "https://www.figma.com/design/0yRClX9rb1satfG7XVLfqA/Courier-Booking?node-id=0-1&p=f&t=xC0yuYnrU2ELAp0q-0",
     challenge: "Trust is a major barrier in P2P travel services. The app needed to convey safety and authenticity immediately.",
     solution: "Introduced 'Video Introductions' for guides and a transparent review system that highlights specific attributes like 'punctuality' and 'local knowledge'."
   },
@@ -115,6 +117,7 @@ export const PROJECTS: Project[] = [
       "Assets/eduspark-folio-img2.png"
     ],
     technologies: ["Figma", "Photoshop", "Illustrator"],
+    figma: "https://www.figma.com/design/Z4Aiv4TVx10JTa6Pp59Vu6/Untitled?node-id=0-1&p=f&t=yJtgFnz8YrSIsVCW-0",
     challenge: "Design a learning platform that presents a wide variety of courses without overwhelming users, while ensuring a smooth flow from discovery to certification. The experience needed to stay intuitive, engaging, and easy to navigate for learners of all levels.",
     solution: "I designed Eduspark with a clear, learner-focused interface that simplifies course exploration and makes learning sessions smooth and distraction-free. The visual hierarchy, clean navigation, and structured layouts help users quickly find courses, track their progress, and earn certificates with ease."
   }
@@ -286,16 +289,16 @@ export const EXPERIENCE: Experience[] = [
 export const EDUCATION: Education[] = [
   {
     id: "1",
-    degree: "Master of Interaction Design",
-    institution: "Design Academy of Arts",
-    year: "2016",
-    description: "Thesis on 'Emotive Interfaces in Fintech Applications'."
+    degree: "Diploma in Advertising",
+    institution: "Image Creative Education",
+    year: "2017",
+    description: "Learned and applied skills in Adobe Photoshop, Illustrator, HTML, and CSS for design and web development."
   },
   {
     id: "2",
-    degree: "Bachelor of Computer Science",
-    institution: "State University",
-    year: "2014",
-    description: "Minor in Graphic Design."
+    degree: "Bachelor of Commerce",
+    institution: "Calicut University",
+    year: "2015",
+    description: " "
   }
 ];

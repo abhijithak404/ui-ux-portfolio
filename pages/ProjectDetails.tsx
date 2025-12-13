@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PROJECTS } from '../constants';
-import { ArrowLeft, Calendar, Code, ExternalLink, ArrowRight } from 'lucide-react';
+import { ArrowLeft, Calendar, Code, ExternalLink, ArrowRight, Figma } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const ProjectDetails: React.FC = () => {
@@ -72,10 +72,15 @@ export const ProjectDetails: React.FC = () => {
               <p className="text-slate-600 dark:text-slate-400 text-sm">2 week</p>
             </div>
             <div>
-              <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2 flex items-center gap-2">
-                <ExternalLink className="w-4 h-4" /> Behance
-              </h3>
-              <a href="https://www.behance.net/AbhijithAk" className="text-primary-600 dark:text-primary-400 text-sm hover:underline font-medium">View on Behance</a>
+
+              {project.figma && (
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2 flex items-center gap-2">
+                    <Figma className="w-4 h-4" /> Design File
+                  </h3>
+                  <a href={project.figma} target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 text-sm hover:underline font-medium">View Figma File</a>
+                </div>
+              )}
             </div>
           </div>
         </motion.div>

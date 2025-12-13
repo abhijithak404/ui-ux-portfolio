@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { JOB_PROJECTS } from '../constants';
-import { ArrowLeft, Calendar, Briefcase, Building2, Layout, ExternalLink, Globe, Smartphone, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, Calendar, Briefcase, Building2, Layout, ExternalLink, Globe, Smartphone, ArrowUpRight, Figma } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const JobProjectDetails: React.FC = () => {

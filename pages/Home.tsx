@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { PROJECTS, EXPERIENCE, SERVICES, JOB_PROJECTS, BRANDS, SKILLS, TESTIMONIALS, SOCIAL_LINKS } from '../constants';
+import { PROJECTS, EXPERIENCE, SERVICES, JOB_PROJECTS, BRANDS, SKILLS, TESTIMONIALS, SOCIAL_LINKS, EDUCATION } from '../constants';
 import {
   ArrowRight, ArrowUpRight, Play, Instagram, Linkedin,
   ChevronLeft, ChevronRight, ArrowLeft,
@@ -494,6 +494,69 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Education Section */}
+      <section id="education" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          {/* Left Column: Image/Visual */}
+          <div className="relative order-2 lg:order-1">
+            <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden relative shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?q=80&w=1974&auto=format&fit=crop"
+                alt="Education"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-slate-900/10"></div>
+            </div>
+            {/* Floating Badge */}
+            <div className="absolute -bottom-6 -right-6 md:bottom-8 md:-right-8 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl max-w-xs border border-slate-100 dark:border-slate-700 hidden md:block">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-2xl">🎓</div>
+                <div>
+                  <p className="font-bold text-slate-900 dark:text-white">Lifelong Learner</p>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Constantly upgrading skills</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Timeline */}
+          <div className="order-1 lg:order-2">
+            <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
+              Education
+            </span>
+            <h2 className="text-3xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight mb-12">
+              Academic <br /> Background
+            </h2>
+
+            <div className="space-y-12">
+              {EDUCATION.map((edu, index) => (
+                <motion.div
+                  key={edu.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="relative pl-8 border-l border-slate-200 dark:border-slate-800"
+                >
+                  <span className="absolute -left-1.5 top-2.5 w-3 h-3 rounded-full bg-slate-900 dark:bg-white ring-4 ring-white dark:ring-dark-950 transition-colors"></span>
+
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">{edu.degree}</h3>
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="text-lg font-medium text-slate-500 dark:text-slate-400">{edu.institution}</span>
+                    <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-xs font-bold rounded-full text-slate-600 dark:text-slate-300">
+                      {edu.year}
+                    </span>
+                  </div>
+                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                    {edu.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FEATURE EXPLORER SHOWCASE (Selected Works) */}
       <FeatureExplorerShowcase />
 
@@ -655,18 +718,18 @@ export const Home: React.FC = () => {
                 <div className="space-y-4">
                   <div>
                     <a href={`mailto:${SOCIAL_LINKS.email}`} className="mb-2 hover:text-white transition-colors cursor-pointer block">{SOCIAL_LINKS.email}</a>
-                    <p className="hover:text-white transition-colors cursor-pointer">hello@abhijith.design</p>
+                    <p className="hover:text-white transition-colors cursor-pointer">abhi.dsgn@outlook.in</p>
                   </div>
                   <div>
-                    <p className="mb-2 hover:text-white transition-colors cursor-pointer">+91 987 654 3210</p>
-                    <p className="hover:text-white transition-colors cursor-pointer">+91 123 456 7890</p>
+                    <p className="mb-2 hover:text-white transition-colors cursor-pointer">(91) 9946 809 652</p>
+                    {/* <p className="hover:text-white transition-colors cursor-pointer">+91 123 456 7890</p> */}
                   </div>
                 </div>
               </div>
 
               {/* Social Media Column */}
               <div className="w-full">
-                <h4 className="font-bold text-white mb-4 md:mb-6 text-lg">Social Media</h4>
+                <h4 className="font-bold text-white mb-4 md:mb-6 text-lg">Connect with me</h4>
                 <div className="flex gap-4">
                   <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
                     <Instagram className="w-5 h-5" />
