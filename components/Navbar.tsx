@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Moon, Sun, Download } from 'lucide-react';
+import { Menu, X, Moon, Sun, Eye } from 'lucide-react';
 import path from 'path';
 
 export const Navbar: React.FC = () => {
@@ -90,11 +90,12 @@ export const Navbar: React.FC = () => {
           </button>
           <a
             href="Assets/Abhijith-Ak-Resume.pdf"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold hover:opacity-90 transition-opacity"
           >
-            <Download size={16} />
-            Resume
+            <Eye size={16} />
+            View Resume
           </a>
         </div>
 
@@ -131,10 +132,12 @@ export const Navbar: React.FC = () => {
             ))}
             <a
               href="Assets/Abhijith-Ak-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-4 mx-auto inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold text-lg"
             >
-              <Download size={20} />
-              Download Resume
+              <Eye size={20} />
+              View Resume
             </a>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { PROJECTS, EXPERIENCE, SERVICES, JOB_PROJECTS, BRANDS, SKILLS, TESTIMONIALS } from '../constants';
+import { PROJECTS, EXPERIENCE, SERVICES, JOB_PROJECTS, BRANDS, SKILLS, TESTIMONIALS, SOCIAL_LINKS } from '../constants';
 import {
-  ArrowRight, ArrowUpRight, Play, Twitter, Instagram, Youtube, Layout, ExternalLink,
+  ArrowRight, ArrowUpRight, Play, Instagram, Linkedin,
   ChevronLeft, ChevronRight, ArrowLeft,
   // Custom Skill Icons
   Figma, PenTool, Smartphone, Code2, Globe, Box, FileText, Zap, Gem, Braces, Image, Feather
@@ -10,6 +10,19 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { Particles } from '../components/Particles';
 import { Project } from '../types';
+
+// Custom SVG Icons for brands missing in standard sets or to ensure consistency
+const XIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
+const BehanceIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M22 7h-7v-2h7v2zm1.726 10c0 5.523-4.477 10-10 10-5.523 0-10-4.477-10-10 0-5.523 4.477-10 10-10 5.523 0 10 4.477 10 10zm-22 0c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8-8 3.582-8 8zm10.519-2.738c.677-.381 1.059-1.071 1.059-1.928 0-1.897-1.424-2.887-3.69-2.887h-3.388v7.05h3.692c1.789 0 3.322-.926 3.322-2.784 0-.824-.413-1.636-.995-1.451zm-4.329-3.235h1.611c.907 0 1.549.333 1.549 1.259 0 .845-.583 1.282-1.549 1.282h-1.611v-2.541zm1.706 5.617h-1.706v-2.713h1.706c.928 0 1.707.41 1.707 1.346 0 .976-.757 1.367-1.707 1.367z" />
+  </svg>
+);
 
 // Typewriter Component
 const TypewriterText: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
@@ -253,7 +266,7 @@ export const Home: React.FC = () => {
                 className="relative aspect-[4/5] md:aspect-square w-full max-w-md ml-auto rounded-[3rem] overflow-hidden shadow-2xl"
               >
                 <img
-                  src="/Assets/image.jpg"
+                  src="/Assets/image1.webp"
                   alt="UIUX Designer"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />
@@ -356,7 +369,7 @@ export const Home: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative rounded-[2.5rem] overflow-hidden group cursor-pointer">
             <img
-              src="/Assets/work-image.png"
+              src="/Assets/work-image.webp"
               alt="Working"
               className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -630,47 +643,59 @@ export const Home: React.FC = () => {
               <p className="text-slate-400 max-w-sm">Creating digital products that help businesses reach their goals and inspire users.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-sm text-slate-400">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 text-sm text-slate-400 w-full lg:w-auto flex-1">
+              <div className="w-full">
                 <h4 className="font-bold text-white mb-6 text-lg">Address</h4>
                 <p className="mb-2">Kozhikode, Kerala</p>
                 <p>India</p>
               </div>
-              <div>
-                <h4 className="font-bold text-white mb-6 text-lg">Email Address</h4>
-                <p className="mb-2 hover:text-white transition-colors cursor-pointer">abhijithak3@gmail.com</p>
-                <p className="hover:text-white transition-colors cursor-pointer">abhi.dsgn@outlook.in</p>
+              {/* Contact Column (Email + Phone) */}
+              <div className="w-full">
+                <h4 className="font-bold text-white mb-4 md:mb-6 text-lg">Contact</h4>
+                <div className="space-y-4">
+                  <div>
+                    <a href={`mailto:${SOCIAL_LINKS.email}`} className="mb-2 hover:text-white transition-colors cursor-pointer block">{SOCIAL_LINKS.email}</a>
+                    <p className="hover:text-white transition-colors cursor-pointer">hello@abhijith.design</p>
+                  </div>
+                  <div>
+                    <p className="mb-2 hover:text-white transition-colors cursor-pointer">+91 987 654 3210</p>
+                    <p className="hover:text-white transition-colors cursor-pointer">+91 123 456 7890</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h4 className="font-bold text-white mb-6 text-lg">Phone Number</h4>
-                <p className="mb-2 hover:text-white transition-colors cursor-pointer">(91) 9946 809 652</p>
-                {/* <p className="hover:text-white transition-colors cursor-pointer">082124720342342</p> */}
+
+              {/* Social Media Column */}
+              <div className="w-full">
+                <h4 className="font-bold text-white mb-4 md:mb-6 text-lg">Social Media</h4>
+                <div className="flex gap-4">
+                  <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
+                    <XIcon className="w-4 h-4" />
+                  </a>
+                  <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a href={SOCIAL_LINKS.behance} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
+                    <BehanceIcon className="w-5 h-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-center pt-12 mt-12 border-t border-white/5 text-sm text-slate-500">
-            <div className="flex gap-6 mb-6 md:mb-0">
-              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
-                <Instagram className="w-5 h-5" />
-              </div>
-              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
-                <Twitter className="w-5 h-5" />
-              </div>
-              <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white hover:text-slate-900 transition-all cursor-pointer">
-                <Youtube className="w-5 h-5" />
-              </div>
+          <div className="flex flex-col items-center pt-12 mt-12 border-t border-white/5 text-sm text-slate-500">
+            <div className="flex flex-wrap gap-4 md:gap-8 justify-center mb-6">
+              <span className="hover:text-white cursor-pointer transition-colors">Templates</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Tools</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Features</span>
+              <span className="hover:text-white cursor-pointer transition-colors">About Us</span>
             </div>
-            <div className="flex flex-wrap gap-8 justify-center">
-              <span className="hover:text-white cursor-pointer transition-colors">About</span>
-              <span className="hover:text-white cursor-pointer transition-colors">Skills</span>
-              <span className="hover:text-white cursor-pointer transition-colors">Works</span>
-              <span className="hover:text-white cursor-pointer transition-colors">Projects</span>
-            </div>
-            <p className="mt-6 md:mt-0">All rights reserved @Duwy</p>
+            <p>All rights reserved @Abhijith</p>
           </div>
         </div>
       </section>
-    </main>
+    </main >
   );
 };
