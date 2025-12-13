@@ -19,33 +19,33 @@ export const SKILLS = [
   { name: "Figma", level: "Expert", category: "Design" },
   { name: "Adobe XD", level: "Expert", category: "Design" },
   { name: "Sketch", level: "Expert", category: "Design" },
-  { name: "HTML/CSS", level: "Intermediate", category: "Development" },
-  { name: "JS", level: "Advanced", category: "Development" },
+  { name: "HTML/CSS", level: "Advanced", category: "Development" },
+  { name: "JS", level: "Intermediate", category: "Development" },
   { name: "Adobe Photoshop", level: "Advanced", category: "Motion" },
-  { name: "Adobe Illustrtor", level: "Expert", category: "Productivity" },
-  { name: "Webflow", level: "Expert", category: "Development" },
+  { name: "Adobe Illustrtor", level: "Advanced", category: "Productivity" },
+  { name: "Webflow", level: "Intermediate", category: "Development" },
   { name: "Blender", level: "Intermediate", category: "3D" },
-  { name: "Notion", level: "Advanced", category: "Productivity" },
-  { name: "Protopie", level: "Advanced", category: "Prototyping" },
+  { name: "Notion", level: "Intermediate", category: "Productivity" },
+  { name: "Protopie", level: "Intermediate", category: "Prototyping" },
 ];
 
 export const SERVICES = [
   {
-    title: "Social Ads",
-    description: "Strategic and creative social media advertising to reach the right audience.",
+    title: "UI Design",
+    description: "Crafting intuitive and visually engaging interfaces that delight users and enhance digital experiences.",
   },
   {
-    title: "Search Engineer",
-    description: "Optimize your website visibility and ranking with effective SEO strategies.",
+    title: "UX Research",
+    description: "Understanding users through research and testing to create meaningful and seamless interactions.",
   },
   {
-    title: "Content Marketing",
-    description: "We create strategic and engaging content to build brand awareness.",
+    title: "Visual Design",
+    description: "Designing compelling visuals that communicate brand stories and captivate audiences.",
     highlight: true
   },
   {
-    title: "Saas Marketing",
-    description: "We help your SaaS product reach the right audience with a data-driven strategy.",
+    title: "Branding",
+    description: "Building cohesive brand identities that resonate, inspire trust, and stand out in the market.",
   }
 ];
 
@@ -160,34 +160,42 @@ export const JOB_PROJECTS = [
 export const EXPERIENCE: Experience[] = [
   {
     id: "1",
-    role: "Graphic Designer",
-    company: "Dewa-Dewi Tech",
-    period: "2015 - 2017",
-    description: "Graphic Designer at Dewa-Dewi Tech, creating creative and functional visual designs to support brands and digital products.",
+    role: "UI UX Designer",
+    company: "Quadleo Techno Solutions",
+    period: "2024 - Now",
+    description: "Designing intuitive and engaging user experiences for web and mobile applications. • Collaborating with developers, product managers, and stakeholders to ensure seamless UI implementation.",
     skills: ["Visual Design", "Branding"]
   },
   {
     id: "2",
-    role: "UI/UX Designer",
-    company: "Odama Studio",
-    period: "2017 - 2019",
-    description: "UI/UX Designer at Odama Studio, creating intuitive and engaging digital experiences through functional and aesthetic design.",
+    role: "Professional Development",
+    company: "UI UX Designing & Freelance Job",
+    period: "2022 - 2024",
+    description: "",
     skills: ["Prototyping", "Wireframing"]
   },
   {
     id: "3",
-    role: "UX Researcher",
-    company: "Korsa Studio",
-    period: "2018 - 2021",
-    description: "UX Researcher at Korsa Studio, connecting data and design to create intuitive and effective user experiences.",
+    role: "Inventory Management",
+    company: "Kuwait",
+    period: "2019 - 2022",
+    description: "Managed stock levels, tracking, and replenishment to ensure efficient inventory control. • Maintained accurate records of inventory transactions and reports.",
     skills: ["Research", "User Testing"]
   },
   {
     id: "4",
-    role: "Product Designer",
-    company: "Apple. Inc",
-    period: "2021 - Now",
-    description: "Product Designer at Apple Inc., designing innovative experiences that connect technology and aesthetics to create iconic products.",
+    role: "Graphic Designer",
+    company: "Enzapps Software Solutions",
+    period: "2017 - 2018",
+    description: "Designed visuals for web-based platforms and print media, ensuring brand consistency.",
+    skills: ["Product Design", "System Design"]
+  },
+  {
+    id: "5",
+    role: "Graphic Designer",
+    company: "Fashion Runway International",
+    period: "2016 - 2017",
+    description: "Designed high-quality print materials and logos for fashion branding and promotions. • Utilized Adobe Photoshop, Illustrator, and other design tools to produce compelling graphics.",
     skills: ["Product Design", "System Design"]
   }
 ];
