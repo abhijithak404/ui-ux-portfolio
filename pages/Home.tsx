@@ -232,7 +232,7 @@ export const Home: React.FC = () => {
               >
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop"
-                  alt="Product Designer"
+                  alt="UIUX Designer"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />
                 <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-3xl text-white">
