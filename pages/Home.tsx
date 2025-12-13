@@ -369,7 +369,7 @@ export const Home: React.FC = () => {
       </section>
 
       {/* NEW Detailed Skills Section */}
-      <section className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
+      <section id="skills" className="py-16 md:py-20 px-4 md:px-8 max-w-[1440px] mx-auto w-full">
         <div className="mb-12 text-center md:text-left">
           <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
             Technical Proficiency

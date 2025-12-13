@@ -43,13 +43,14 @@ export const Navbar: React.FC = () => {
     { name: 'Skills', path: '/#skills' },
     { name: 'Experience', path: '/#experience' },
     { name: 'Works', path: '/#work' },
-    { name: 'Projects', path: '/#project' },
+    { name: 'Projects', path: '/#professional-work' },
+    { name: 'Contact', path: '/#contact' },
   ];
 
   return (
     <>
       <nav
-        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-5xl rounded-full px-6 py-4 flex justify-between items-center ${isScrolled
+        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-6xl rounded-full px-6 py-4 flex justify-between items-center ${isScrolled
           ? 'bg-white/80 dark:bg-dark-950/80 backdrop-blur-lg border border-slate-200 dark:border-slate-800 shadow-xl'
           : 'bg-transparent backdrop-blur-sm border border-transparent'
           }`}
@@ -66,7 +67,7 @@ export const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8 bg-slate-100 dark:bg-slate-900/50 px-8 py-2 rounded-full backdrop-blur-md">
+        <div className="hidden lg:flex items-center space-x-6 bg-slate-100 dark:bg-slate-900/50 px-8 py-2 rounded-full backdrop-blur-md">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -79,7 +80,7 @@ export const Navbar: React.FC = () => {
         </div>
 
         {/* Actions */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-3">
           <button
             onClick={toggleTheme}
             className="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-white"
@@ -88,7 +89,7 @@ export const Navbar: React.FC = () => {
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <a
-            href="/resume.pdf"
+            href="Assets/Abhijith-Ak-Resume.pdf"
             download
             className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-bold hover:opacity-90 transition-opacity"
           >
@@ -98,7 +99,7 @@ export const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center gap-3">
+        <div className="lg:hidden flex items-center gap-3">
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white"
@@ -116,8 +117,8 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-40 bg-white/95 dark:bg-dark-950/95 backdrop-blur-xl pt-32 px-6 md:hidden">
-          <div className="flex flex-col gap-8 text-center">
+        <div className="fixed inset-0 z-40 bg-white/95 dark:bg-dark-950/95 backdrop-blur-xl pt-32 px-6 lg:hidden overflow-y-auto">
+          <div className="flex flex-col gap-6 text-center pb-12">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -129,8 +130,8 @@ export const Navbar: React.FC = () => {
               </a>
             ))}
             <a
-              href="/resume.pdf"
-              className="mt-8 mx-auto inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold text-lg"
+              href="Assets/Abhijith-Ak-Resume.pdf"
+              className="mt-4 mx-auto inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold text-lg"
             >
               <Download size={20} />
               Download Resume
