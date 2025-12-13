@@ -268,6 +268,55 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section id="services" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4 pr-8">
+            <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
+              Services
+            </span>
+            <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900 dark:text-white mb-6 leading-tight">
+              A Comprehensive look at what we offer and how we deliver
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg">
+              We provide end-to-end design solutions that help your business grow and succeed in the digital age.
+            </p>
+            <a href="#contact" className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors">
+              Start a Project <ArrowRight size={18} />
+            </a>
+          </div>
+
+          <div className="lg:col-span-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {SERVICES.map((service, index) => (
+                <div
+                  key={index}
+                  className={`p-10 rounded-[2rem] flex flex-col justify-between min-h-[320px] group transition-all duration-300 ${service.highlight
+                    ? 'bg-slate-900 text-white'
+                    : 'bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800'
+                    }`}
+                >
+                  <div>
+                    <h3 className={`text-2xl font-bold mb-4 ${service.highlight ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
+                      {service.title}
+                    </h3>
+                    <p className={`text-base leading-relaxed ${service.highlight ? 'text-slate-300' : 'text-slate-500 dark:text-slate-400'}`}>
+                      {service.description}
+                    </p>
+                  </div>
+                  <div className="flex justify-end mt-4">
+                    <span className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 ${service.highlight ? 'border-white/30 group-hover:bg-white group-hover:text-slate-900' : 'border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-slate-900'
+                      }`}>
+                      <ArrowRight className="w-5 h-5" />
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
         <div className="mb-12">
@@ -319,54 +368,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4 pr-8">
-            <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
-              Services
-            </span>
-            <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900 dark:text-white mb-6 leading-tight">
-              A Comprehensive look at what we offer and how we deliver
-            </h2>
-            <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg">
-              We provide end-to-end design solutions that help your business grow and succeed in the digital age.
-            </p>
-            <a href="#contact" className="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors">
-              Start a Project <ArrowRight size={18} />
-            </a>
-          </div>
 
-          <div className="lg:col-span-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {SERVICES.map((service, index) => (
-                <div
-                  key={index}
-                  className={`p-10 rounded-[2rem] flex flex-col justify-between min-h-[320px] group transition-all duration-300 ${service.highlight
-                    ? 'bg-slate-900 text-white'
-                    : 'bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800'
-                    }`}
-                >
-                  <div>
-                    <h3 className={`text-2xl font-bold mb-4 ${service.highlight ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
-                      {service.title}
-                    </h3>
-                    <p className={`text-base leading-relaxed ${service.highlight ? 'text-slate-300' : 'text-slate-500 dark:text-slate-400'}`}>
-                      {service.description}
-                    </p>
-                  </div>
-                  <div className="flex justify-end mt-4">
-                    <span className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 ${service.highlight ? 'border-white/30 group-hover:bg-white group-hover:text-slate-900' : 'border-slate-200 dark:border-slate-700 group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-slate-900'
-                      }`}>
-                      <ArrowRight className="w-5 h-5" />
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* NEW Detailed Skills Section */}
       <section id="skills" className="py-16 md:py-20 px-4 md:px-8 max-w-[1440px] mx-auto w-full">

@@ -38,10 +38,10 @@ export const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'About', path: '/#about' },
     { name: 'Services', path: '/#services' },
-    { name: 'Skills', path: '/#skills' },
-    { name: 'Experience', path: '/#experience' },
+    { name: 'About', path: '/#about' },
+    // { name: 'Skills', path: '/#skills' },
+    // { name: 'Experience', path: '/#experience' },
     { name: 'Works', path: '/#work' },
     { name: 'Projects', path: '/#professional-work' },
     { name: 'Contact', path: '/#contact' },

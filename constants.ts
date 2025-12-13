@@ -2,9 +2,11 @@ import { Project, Experience, Education, JobProject } from './types';
 
 export const SOCIAL_LINKS = {
   github: "https://github.com",
-  linkedin: "https://linkedin.com",
+  linkedin: "https://www.linkedin.com/in/abhijithak/",
   twitter: "https://twitter.com",
-  email: "abhijithak3@gmail.com"
+  email: "abhijithak3@gmail.com",
+  behance: "https://www.behance.net/AbhijithAk",
+  instagram: "https://www.instagram.com/abhi.dsgn"
 };
 
 export const BRANDS = [
