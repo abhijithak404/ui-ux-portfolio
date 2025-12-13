@@ -73,48 +73,48 @@ export const TESTIMONIALS = [
 export const PROJECTS: Project[] = [
   {
     id: "fintech-dashboard",
-    title: "Nova Fintech Dashboard",
-    category: "Web Application",
-    summary: "A comprehensive financial analytics dashboard for enterprise clients.",
-    description: "Nova is a B2B SaaS platform designed to help financial institutions visualize complex datasets. The goal was to reduce cognitive load while displaying real-time market data.",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    title: "GameCore",
+    category: "Mobile Application",
+    summary: "A bold, futuristic e-commerce app that blends immersive visuals with a seamless shopping experience.",
+    description: "Gamecore is a concept project focused on designing a modern e-commerce app for gaming products. The goal was to combine a futuristic visual style with an effortless shopping journey for players.",
+    thumbnail: "Assets/gamecore.png",
     images: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop"
+      "Assets/gamecoe-img1.png",
+      "Assets/gamecoe-img2.png"
     ],
-    technologies: ["React", "D3.js", "Tailwind CSS", "Figma"],
-    challenge: "Users were overwhelmed by the density of data in the legacy system, leading to slow decision-making processes.",
-    solution: "We implemented a modular widget system allowing users to customize their view, coupled with a 'focus mode' for deep dives into specific metrics."
+    technologies: ["Figma", "Photoshop", "Illustrator"],
+    challenge: "To design a visually striking interface that reflects gaming culture while keeping the e-commerce experience intuitive and fast. Balancing style with usability was key.",
+    solution: "The solution focused on creating a visually engaging yet highly functional shopping experience. A dark, futuristic theme with neon accents was combined with clear layouts and intuitive navigation, ensuring users could explore and purchase products effortlessly. Every interaction was designed to feel smooth, responsive, and true to the energy of gaming culture."
   },
   {
     id: "travel-app",
-    title: "Wanderlust Mobile App",
-    category: "Mobile Design",
-    summary: "An experiential travel booking app focused on local experiences.",
-    description: "Wanderlust connects travelers with local guides. The design focuses on immersive imagery and a seamless booking flow that feels like a conversation.",
-    thumbnail: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop",
+    title: "DoPack",
+    category: "Website Design",
+    summary: "A seamless courier booking and tracking web experience — designed to make delivery management fast, clear, and effortless.",
+    description: "This project focuses on designing a modern and user-friendly courier booking platform that simplifies the process of sending and tracking shipments. The goal was to create a clean, reliable, and easy-to-navigate interface for customers and admins.",
+    thumbnail: "Assets/dopack.png",
     images: [
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1432821596592-e2c18b78144f?q=80&w=2070&auto=format&fit=crop"
+      "Assets/DoPack-img1.png",
+      "Assets/DoPack-img2.png"
     ],
-    technologies: ["iOS", "Figma", "Protopie", "SwiftUI"],
+    technologies: ["Figma", "Photoshop", "Illustrator"],
     challenge: "Trust is a major barrier in P2P travel services. The app needed to convey safety and authenticity immediately.",
     solution: "Introduced 'Video Introductions' for guides and a transparent review system that highlights specific attributes like 'punctuality' and 'local knowledge'."
   },
   {
     id: "eco-commerce",
-    title: "Leaf & Loam E-commerce",
-    category: "E-commerce",
-    summary: "A sustainable plant shop with AR visualization features.",
-    description: "Leaf & Loam is a boutique plant shop. The website features an AR tool to see how plants fit in your space before buying.",
-    thumbnail: "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?q=80&w=2149&auto=format&fit=crop",
+    title: "EduSpark",
+    category: "Mobile Application",
+    summary: "Learn. Grow. Achieve.",
+    description: "Eduspark is an online learning platform that allows students and professionals to explore, purchase, and learn from a wide range of courses. The app supports both free and paid learning, complete with progress tracking and certificate generation.",
+    thumbnail: "Assets/eduspark.png",
     images: [
-      "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?q=80&w=2149&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=2090&auto=format&fit=crop"
+      "Assets/eduspark-folio-img1.png",
+      "Assets/eduspark-folio-img2.png"
     ],
-    technologies: ["Shopify", "WebGL", "Blender", "Sass"],
-    challenge: "High return rates due to customers misjudging plant sizes.",
-    solution: "Integrated a WebXR viewer that projects the plant into the user's room at true scale, reducing returns by 40%."
+    technologies: ["Figma", "Photoshop", "Illustrator"],
+    challenge: "Design a learning platform that presents a wide variety of courses without overwhelming users, while ensuring a smooth flow from discovery to certification. The experience needed to stay intuitive, engaging, and easy to navigate for learners of all levels.",
+    solution: "I designed Eduspark with a clear, learner-focused interface that simplifies course exploration and makes learning sessions smooth and distraction-free. The visual hierarchy, clean navigation, and structured layouts help users quickly find courses, track their progress, and earn certificates with ease."
   }
 ];
 

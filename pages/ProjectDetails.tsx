@@ -26,7 +26,7 @@ export const ProjectDetails: React.FC = () => {
   return (
     <div className="bg-white dark:bg-dark-950 min-h-screen pt-24 pb-20">
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Navigation */}
         <Link to="/#work" className="inline-flex items-center text-slate-500 hover:text-primary-500 transition-colors mb-8 group">
           <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
@@ -35,20 +35,20 @@ export const ProjectDetails: React.FC = () => {
 
         {/* Header */}
         <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-xs font-bold rounded-full uppercase tracking-wider">
               {project.category}
             </span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-display font-bold text-slate-900 dark:text-white mb-6 leading-tight">
             {project.title}
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 leading-relaxed mb-10">
             {project.description}
           </p>
@@ -69,13 +69,13 @@ export const ProjectDetails: React.FC = () => {
               <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2 flex items-center gap-2">
                 <Calendar className="w-4 h-4" /> Timeline
               </h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm">3 Months (2023)</p>
+              <p className="text-slate-600 dark:text-slate-400 text-sm">2 week</p>
             </div>
             <div>
-               <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2 flex items-center gap-2">
-                <ExternalLink className="w-4 h-4" /> Live Site
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-2 flex items-center gap-2">
+                <ExternalLink className="w-4 h-4" /> Behance
               </h3>
-              <a href="#" className="text-primary-600 dark:text-primary-400 text-sm hover:underline font-medium">View Live Project</a>
+              <a href="https://www.behance.net/AbhijithAk" className="text-primary-600 dark:text-primary-400 text-sm hover:underline font-medium">View on Behance</a>
             </div>
           </div>
         </motion.div>
@@ -104,10 +104,10 @@ export const ProjectDetails: React.FC = () => {
             </p>
           </motion.div>
           <motion.div
-             initial={{ opacity: 0, x: 20 }}
-             whileInView={{ opacity: 1, x: 0 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
             <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">The Solution</h2>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -117,7 +117,7 @@ export const ProjectDetails: React.FC = () => {
         </div>
 
         {/* Secondary Image */}
-         <motion.div
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -129,7 +129,7 @@ export const ProjectDetails: React.FC = () => {
 
         {/* Next Project Nav (Simple) */}
         <div className="text-center pt-12 border-t border-slate-200 dark:border-slate-800">
-          <Link 
+          <Link
             to="/"
             className="inline-flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
           >
