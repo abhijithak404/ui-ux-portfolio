@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Moon, Sun, Download } from 'lucide-react';
+import path from 'path';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,24 +38,25 @@ export const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'Work', path: '/#work' },
-    { name: 'Services', path: '/#services' },
-    { name: 'Experience', path: '/#experience' },
     { name: 'About', path: '/#about' },
+    { name: 'Services', path: '/#services' },
+    { name: 'Skills', path: '/#skills' },
+    { name: 'Experience', path: '/#experience' },
+    { name: 'Works', path: '/#work' },
+    { name: 'Projects', path: '/#project' },
   ];
 
   return (
     <>
-      <nav 
-        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-5xl rounded-full px-6 py-4 flex justify-between items-center ${
-          isScrolled 
-            ? 'bg-white/80 dark:bg-dark-950/80 backdrop-blur-lg border border-slate-200 dark:border-slate-800 shadow-xl' 
-            : 'bg-transparent backdrop-blur-sm border border-transparent'
-        }`}
+      <nav
+        className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 w-[95%] max-w-5xl rounded-full px-6 py-4 flex justify-between items-center ${isScrolled
+          ? 'bg-white/80 dark:bg-dark-950/80 backdrop-blur-lg border border-slate-200 dark:border-slate-800 shadow-xl'
+          : 'bg-transparent backdrop-blur-sm border border-transparent'
+          }`}
       >
         {/* Logo */}
-        <Link 
-          to="/" 
+        <Link
+          to="/"
           className="flex items-center gap-2 text-xl font-display font-bold text-slate-900 dark:text-white"
         >
           <div className="w-8 h-8 bg-slate-900 dark:bg-white rounded-full flex items-center justify-center">
@@ -97,7 +99,7 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center gap-3">
-           <button
+          <button
             onClick={toggleTheme}
             className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white"
           >
