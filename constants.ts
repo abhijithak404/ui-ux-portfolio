@@ -21,10 +21,10 @@ export const SKILLS = [
   { name: "Figma", level: "Expert", category: "Design" },
   { name: "Adobe XD", level: "Expert", category: "Design" },
   { name: "Sketch", level: "Expert", category: "Design" },
-  { name: "HTML/CSS", level: "Advanced", category: "Development" },
-  { name: "JS", level: "Intermediate", category: "Development" },
   { name: "Adobe Photoshop", level: "Advanced", category: "Design" },
   { name: "Adobe Illustrator", level: "Advanced", category: "Design" },
+  { name: "HTML/CSS", level: "Advanced", category: "Development" },
+  { name: "JS", level: "Intermediate", category: "Development" },
   { name: "Webflow", level: "Intermediate", category: "Development" },
   { name: "Blender", level: "Intermediate", category: "3D" },
   { name: "Notion", level: "Intermediate", category: "Productivity" },
@@ -53,13 +53,13 @@ export const SERVICES = [
 
 export const TESTIMONIALS = [
   {
-    quote: "Without Journey Commerce, we would never have been able to implement this system ourselves. Being a small team we don't have enough hours in the day. The team at Journey Commerce researched our brand, planned the content and provided weekly feedback.",
+    quote: "As a small team, we couldn’t have done this without Abhijith. His thoughtful brand research, clear content planning, and regular weekly feedback kept the project focused, efficient, and on track.",
     author: "Dhimmo Reijnder",
     role: "Founder, The Dewa",
     image: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
-    quote: "The attention to detail and user-centric approach completely transformed our product. We saw a 200% increase in user engagement within the first month of launch. Highly recommended for any serious SaaS business.",
+    quote: "The team’s user-first approach and design precision completely reshaped our product. Engagement increased by 200% within the first month, making a measurable business impact.",
     author: "Sarah Jenks",
     role: "CTO, FinFlow",
     image: "https://randomuser.me/api/portraits/women/44.jpg"

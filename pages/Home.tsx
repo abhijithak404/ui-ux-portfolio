@@ -501,7 +501,7 @@ export const Home: React.FC = () => {
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden relative shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?q=80&w=1974&auto=format&fit=crop"
+                src="Assets/Education.png"
                 alt="Education"
                 className="w-full h-full object-cover"
               />
