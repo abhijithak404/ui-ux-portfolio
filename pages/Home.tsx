@@ -586,7 +586,7 @@ export const Home: React.FC = () => {
             <h2 className="text-6xl md:text-[8rem] font-display font-bold text-white leading-[0.9] mb-8 md:mb-0 tracking-tighter">
               Let's Connect <br /> There
             </h2>
-            <a href={`mailto:alex.morgan@design.co`} className="flex items-center gap-4 px-10 py-5 bg-white rounded-full text-slate-900 hover:scale-105 transition-transform group font-bold text-lg">
+            <a href={`mailto:abhijithak3@gmail.com`} className="flex items-center gap-4 px-10 py-5 bg-white rounded-full text-slate-900 hover:scale-105 transition-transform group font-bold text-lg">
               <span className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-slate-900 group-hover:text-white transition-colors">
                 <ArrowRight className="w-4 h-4" />
               </span>
@@ -598,9 +598,9 @@ export const Home: React.FC = () => {
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-3 text-3xl font-display font-bold text-white">
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                  <span className="text-slate-900 text-xs font-bold">D</span>
+                  <span className="text-slate-900 text-xs font-bold">AJ</span>
                 </div>
-                Duwy
+                Abhijith
               </div>
               <p className="text-slate-400 max-w-sm">Creating digital products that help businesses reach their goals and inspire users.</p>
             </div>
@@ -608,18 +608,18 @@ export const Home: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-sm text-slate-400">
               <div>
                 <h4 className="font-bold text-white mb-6 text-lg">Address</h4>
-                <p className="mb-2">Technology Park 7-12 Gumpang</p>
-                <p>Recidance 57292 Surakarta Indonesia</p>
+                <p className="mb-2">Kozhikode, Kerala</p>
+                <p>India</p>
               </div>
               <div>
                 <h4 className="font-bold text-white mb-6 text-lg">Email Address</h4>
-                <p className="mb-2 hover:text-white transition-colors cursor-pointer">hallo@dewadewi.com</p>
-                <p className="hover:text-white transition-colors cursor-pointer">taskeye@gmail.com</p>
+                <p className="mb-2 hover:text-white transition-colors cursor-pointer">abhijithak3@gmail.com</p>
+                <p className="hover:text-white transition-colors cursor-pointer">abhi.dsgn@outlook.in</p>
               </div>
               <div>
                 <h4 className="font-bold text-white mb-6 text-lg">Phone Number</h4>
-                <p className="mb-2 hover:text-white transition-colors cursor-pointer">(0271) 131 4564 232</p>
-                <p className="hover:text-white transition-colors cursor-pointer">082124720342342</p>
+                <p className="mb-2 hover:text-white transition-colors cursor-pointer">(91) 9946 809 652</p>
+                {/* <p className="hover:text-white transition-colors cursor-pointer">082124720342342</p> */}
               </div>
             </div>
           </div>
@@ -637,10 +637,10 @@ export const Home: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-wrap gap-8 justify-center">
-              <span className="hover:text-white cursor-pointer transition-colors">Templates</span>
-              <span className="hover:text-white cursor-pointer transition-colors">Tools</span>
-              <span className="hover:text-white cursor-pointer transition-colors">Features</span>
-              <span className="hover:text-white cursor-pointer transition-colors">About Us</span>
+              <span className="hover:text-white cursor-pointer transition-colors">About</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Skills</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Works</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Projects</span>
             </div>
             <p className="mt-6 md:mt-0">All rights reserved @Duwy</p>
           </div>
