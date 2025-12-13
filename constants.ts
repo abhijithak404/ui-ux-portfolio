@@ -137,51 +137,53 @@ export const JOB_PROJECTS: JobProject[] = [
     ],
     solution: "The final solution delivered a unified, intuitive CRM experience across customer, complaint, and agent applications. Customers gained easy control over subscriptions and payments, agents could manage accounts and service requests efficiently, and support teams benefited from streamlined complaint handling. The result was a scalable, user-friendly design system that improved operational workflows and enhanced overall user experience.",
     links: {
-      web: "https://healthtrack-example.com",
-      ios: "https://apps.apple.com/us/app/healthtrack",
-      android: "https://play.google.com/store/apps/details?id=com.healthtrack"
+      web: "https://billerq.com",
+      // ios: "https://apps.apple.com/us/app/healthtrack",
+      android: "https://play.google.com/store/apps/details?id=com.quadleo.billerq&pcampaignid=web_share"
     }
   },
   {
     id: "jp-2",
     title: "2ndvahan.com",
-    company: "CreativePulse Agency",
-    role: "UX Researcher",
-    year: "2022",
+    company: "Quadleo Techno Solutions",
+    role: "UI UX Designer",
+    year: "2024",
     image: "Assets/2ndvahan.png",
-    description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
-    overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
-    deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
-    challenge: "The primary objective was to modernize the existing platform while ensuring zero disruption to the user base. We faced specific challenges regarding data visualization complexity and mobile responsiveness. The legacy system was cluttered, leading to patient anxiety.",
-    approach: "As the Lead Designer, I initiated the process with a deep dive into user analytics and stakeholder interviews. We conducted workshops with doctors and patients to align business goals with user needs.",
+    description: "2nd Vahan is a digital used-vehicle selling platform that connects customers, dealerships, and internal teams through a unified multi-platform system. The platform streamlines vehicle listing, inspection, approval, and sales processes while providing customers with an easy and transparent way to browse and inquire about used vehicles.",
+    overview: "2nd Vahan was designed as an end-to-end vehicle marketplace with role-based applications for administrators, staff, and customers. The focus of the UI/UX design was to simplify complex operational workflows, ensure data accuracy across platforms, and deliver a smooth browsing experience for customers. The design emphasizes trust, clarity, and ease of navigation across web and mobile interfaces.",
+    deliverables: ['UI/UX design for Admin Web App, Staff Mobile App, and Customer Mobile App', 'User research insights and role-based user flows', 'Low-fidelity and high-fidelity wireframes', 'Interactive prototypes for key workflows', 'Responsive and accessible UI components', 'Design handoff assets for development'],
+    challenge: "The main challenge was designing a scalable multi-platform system that supported different user roles while maintaining consistency across web and mobile experiences. The platform needed to manage complex processes such as vehicle inspections, approvals, pricing, and dealer coordination, while keeping the customer journey simple and trustworthy. Balancing operational efficiency for staff and admins with an intuitive browsing and inquiry experience for customers was critical.",
+    approach: "A research-driven, collaborative design approach was followed to understand dealership operations, staff workflows, and customer expectations. The design process focused on reducing friction in critical tasks, improving clarity in vehicle information, and ensuring accessibility and responsiveness across devices.",
     approachSteps: [
-      { number: "01", title: "Discovery", description: "Understanding the core problems through research and patient interviews." },
-      { number: "02", title: "Ideation", description: "Wireframing and prototyping multiple solutions with a mobile-first mindset." }
+      { number: "01", title: "UX Research & Flow Definition", description: "Studied user roles, business rules, and real-world dealership workflows to define clear user journeys for listing management, inspections, approvals, and customer inquiries." },
+      { number: "02", title: "Design, Testing & Collaboration", description: "Created wireframes and interactive prototypes, validated usability through testing, and collaborated closely with developers to implement responsive, accessible, and development-ready UI components." }
     ],
-    solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system.",
+    solution: "The final solution delivered a cohesive used-vehicle marketplace experience across admin, staff, and customer platforms. Administrators gained efficient tools to manage listings and transactions, staff could perform inspections and approvals seamlessly, and customers enjoyed a clean, intuitive interface for discovering vehicles and connecting with dealerships. The design improved operational clarity, reduced workflow friction, and enhanced overall user trust and engagement.",
     links: {
-      web: "https://healthtrack-example.com",
+      web: "2ndvahan.com",
       ios: "https://apps.apple.com/us/app/healthtrack",
-      android: "https://play.google.com/store/apps/details?id=com.healthtrack"
+      android: "https://play.google.com/store/apps/details?id=com.quadleo.secondvahanstaff&pcampaignid=web_share"
+      // android: "https://play.google.com/store/apps/details?id=com.secondvahan.dealer&pcampaignid=web_share"
+
     }
   },
   {
     id: "jp-3",
-    title: "EduLearn LMS",
-    company: "TechFlow Solutions",
-    role: "UI Designer",
-    year: "2021",
-    image: "Assets/BillerQ-WaterCRM.png",
-    description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
-    overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
-    deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
-    challenge: "The primary objective was to modernize the existing platform while ensuring zero disruption to the user base. We faced specific challenges regarding data visualization complexity and mobile responsiveness. The legacy system was cluttered, leading to patient anxiety.",
-    approach: "As the Lead Designer, I initiated the process with a deep dive into user analytics and stakeholder interviews. We conducted workshops with doctors and patients to align business goals with user needs.",
+    title: "Healthcare HR",
+    company: "Quadleo Techno Solutions",
+    role: "UI UX Designer",
+    year: "2025",
+    image: "Assets/ESSAR.png",
+    description: "Healthcare HR is a comprehensive workforce and recruitment management system designed for healthcare staffing agencies. The platform enables agencies to efficiently match hospital manpower requirements with qualified healthcare professionals, while providing end-to-end tools for recruitment, attendance tracking, timesheets, and workforce administration.",
+    overview: "Healthcare HR was designed as a role-based platform serving administrators, healthcare agencies, hospitals, and healthcare professionals. The system supports the complete staffing lifecycle—from candidate registration and job application to attendance submission, timesheet approval, and invoicing. The UI/UX design focuses on clarity, compliance, and efficiency in managing large volumes of healthcare workforce data.",
+    deliverables: ['UI/UX design for Admin Web Application', 'UI/UX design for Healthcare Professionals’ Mobile App', 'User flows and role-based journey mapping', 'Low-fidelity and high-fidelity wireframes', 'Interactive prototypes for key workflows', 'Scalable UI components and design system', 'Developer handoff assets'],
+    challenge: "The primary challenge was designing a complex workforce management system that could handle recruitment, documentation, attendance, and payroll-related workflows while remaining easy to use for both administrators and healthcare professionals. Ensuring accurate role-based access, reducing operational complexity, and maintaining clarity across compliance-heavy processes such as document verification and timesheet management were key challenges.",
+    approach: "A user-centered and process-driven approach was followed to understand healthcare staffing operations and compliance requirements. The design prioritized reducing manual effort, minimizing errors in workforce data, and creating intuitive workflows for both administrative users and healthcare professionals.",
     approachSteps: [
-      { number: "01", title: "Discovery", description: "Understanding the core problems through research and patient interviews." },
-      { number: "02", title: "Ideation", description: "Wireframing and prototyping multiple solutions with a mobile-first mindset." }
+      { number: "01", title: "Research & Workflow Definition", description: "Studied healthcare staffing processes, user roles, and compliance needs to define structured workflows for recruitment, job assignment, attendance tracking, and invoicing." },
+      { number: "02", title: "Design, Prototyping & Validation", description: "Created wireframes and interactive prototypes, refined high-fidelity UI designs, and validated usability to ensure efficiency, accuracy, and ease of navigation across the system." }
     ],
-    solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system.",
+    solution: "The final solution delivered a robust and intuitive Healthcare HR platform that streamlined workforce recruitment and management for healthcare staffing agencies. Administrators gained complete control over employee records, job assignments, timesheets, and invoicing, while healthcare professionals benefited from a seamless mobile experience for job applications, attendance, and timesheet submissions. The design improved operational efficiency, data accuracy, and overall user satisfaction across the staffing lifecycle.",
     links: {
       web: "https://healthtrack-example.com",
       ios: "https://apps.apple.com/us/app/healthtrack",
@@ -190,21 +192,21 @@ export const JOB_PROJECTS: JobProject[] = [
   },
   {
     id: "jp-4",
-    title: "LogiStream Analytics",
+    title: "RKS",
     company: "Freelance",
     role: "Product Designer",
     year: "2020",
-    image: "Assets/ESSAR.png",
-    description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
-    overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
-    deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
-    challenge: "The primary objective was to modernize the existing platform while ensuring zero disruption to the user base. We faced specific challenges regarding data visualization complexity and mobile responsiveness. The legacy system was cluttered, leading to patient anxiety.",
-    approach: "As the Lead Designer, I initiated the process with a deep dive into user analytics and stakeholder interviews. We conducted workshops with doctors and patients to align business goals with user needs.",
+    image: "Assets/RKS.png",
+    description: "RKS is a comprehensive waste management application designed to digitize and streamline waste collection operations for municipalities and service providers. The platform connects administrators, customers, field agents, and drivers through a unified system to improve operational efficiency, service transparency, and user engagement.",
+    overview: "The RKS platform was designed as a multi-role ecosystem consisting of an Admin Web App and multiple mobile applications for customers, agents, and drivers. The system supports end-to-end waste management workflows—from service requests and task assignments to collection tracking and real-time updates. The UI/UX design emphasizes simplicity, accessibility, and efficient task execution across all user roles.",
+    deliverables: ['UI/UX design for Admin Web App, Customer Mobile App, Agent Mobile App, and Driver Mobile App', 'Role-based user flows and journey maps', 'Low-fidelity and high-fidelity wireframes', 'Interactive prototypes for key workflows', 'Accessible and responsive UI components', 'Design system and developer handoff assets'],
+    challenge: "The key challenge was designing a complex, multi-role operational system that could support real-time coordination between administrators, field agents, drivers, and customers while maintaining a simple and intuitive user experience. Balancing operational control with ease of use, ensuring accessibility across diverse user groups, and minimizing friction in time-sensitive workflows such as task assignment, navigation, and collection tracking were critical challenges.",
+    approach: "A user-centered, workflow-driven approach was adopted to understand real-world waste management operations and user expectations. The design focused on reducing task complexity, improving visibility of service status, and creating consistent UI patterns across web and mobile platforms.",
     approachSteps: [
-      { number: "01", title: "Discovery", description: "Understanding the core problems through research and patient interviews." },
-      { number: "02", title: "Ideation", description: "Wireframing and prototyping multiple solutions with a mobile-first mindset." }
+      { number: "01", title: "Research & Workflow Mapping", description: "Analyzed operational processes, user roles, and field constraints to define clear workflows for service requests, task assignments, collection schedules, and real-time updates." },
+      { number: "02", title: "Design, Prototyping & Optimization", description: "Developed wireframes and interactive prototypes, refined high-fidelity UI designs, and optimized usability to ensure smooth navigation and efficient task completion for all users." }
     ],
-    solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system.",
+    solution: "The final solution delivered an integrated waste management platform that improved coordination and transparency across all roles. Administrators gained better operational visibility and control, customers could easily request and track waste collection, agents efficiently coordinated tasks, and drivers received clear schedules and navigation support. The design enhanced service reliability, user engagement, and overall operational efficiency.",
     links: {
       web: "https://healthtrack-example.com",
       ios: "https://apps.apple.com/us/app/healthtrack",
@@ -217,7 +219,7 @@ export const JOB_PROJECTS: JobProject[] = [
     company: "Freelance",
     role: "Product Designer",
     year: "2020",
-    image: "Assets/RKS.png",
+    image: "Assets/BillerQ-WaterCRM.png",
     description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
     overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
     deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
