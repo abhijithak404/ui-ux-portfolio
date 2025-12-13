@@ -62,18 +62,18 @@ const FeatureTextItem: React.FC<{
   return (
     <div
       ref={ref}
-      className={`pl-4 md:pl-8 border-l-4 transition-all duration-500 ease-in-out py-10 min-h-[80vh] md:min-h-screen flex flex-col justify-center ${isActive
-          ? 'border-slate-900 dark:border-white opacity-100'
-          : 'border-slate-200 dark:border-slate-800 opacity-30 blur-[1px]'
+      className={`pl-8 border-l-4 transition-all duration-500 ease-in-out py-10 ${isActive
+        ? 'border-slate-900 dark:border-white opacity-100'
+        : 'border-slate-200 dark:border-slate-800 opacity-30 blur-[1px]'
         }`}
     >
       <span className="block text-sm font-bold uppercase tracking-wider mb-3 text-slate-500">
         0{PROJECTS.indexOf(project) + 1}
       </span>
-      <h3 className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">
+      <h3 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mb-6">
         {project.title}
       </h3>
-      <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed max-w-lg">
+      <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed max-w-lg">
         {project.summary}
       </p>
 
@@ -109,22 +109,22 @@ const FeatureExplorerShowcase: React.FC = () => {
   const [activeId, setActiveId] = useState(PROJECTS[0].id);
 
   return (
-    <section id="work" className="relative max-w-[1440px] mx-auto border-t border-slate-200 dark:border-slate-800 w-full overflow-hidden">
+    <section id="work" className="relative max-w-[1440px] mx-auto border-t border-slate-200 dark:border-slate-800">
       <div className="flex flex-col lg:flex-row">
 
         {/* Left Column - Scrolling List */}
-        <div className="w-full lg:w-1/2 px-4 md:px-12 pt-[10vh] pb-[10vh] lg:pt-[20vh] lg:pb-[40vh]">
-          <div className="mb-[5vh] lg:mb-[15vh]">
+        <div className="w-full lg:w-1/2 px-6 md:px-12 pt-[15vh] pb-[20vh] lg:pt-[20vh] lg:pb-[40vh]">
+          <div className="mb-[10vh] lg:mb-[15vh]">
             <span className="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block uppercase tracking-wider mb-4">
               Selected Works
             </span>
-            <h2 className="text-4xl md:text-7xl font-display font-bold text-slate-900 dark:text-white leading-tight">
+            <h2 className="text-5xl md:text-7xl font-display font-bold text-slate-900 dark:text-white leading-tight">
               Featured <br /> Capabilities
             </h2>
           </div>
 
           {/* Gap handles spacing between items */}
-          <div className="flex flex-col gap-[20vh] md:gap-[60vh]">
+          <div className="flex flex-col gap-24 lg:gap-[60vh]">
             {PROJECTS.map((project) => (
               <FeatureTextItem
                 key={project.id}
@@ -185,40 +185,39 @@ export const Home: React.FC = () => {
   };
 
   return (
-    // Main wrapper strictly hidden overflow x
-    <main className="bg-white dark:bg-dark-950 overflow-x-hidden w-full relative">
+    // IMPORTANT: removed 'overflow-hidden' from main to allow sticky positioning to work
+    <main className="bg-white dark:bg-dark-950">
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-12 md:pt-48 md:pb-32 px-4 md:px-8 max-w-[1440px] mx-auto min-h-screen flex flex-col justify-center overflow-hidden">
+      <section className="relative pt-40 pb-20 md:pt-48 md:pb-32 px-4 md:px-8 max-w-[1440px] mx-auto min-h-screen flex flex-col justify-center overflow-hidden">
         <Particles />
-        <div className="relative z-10 w-full">
+        <div className="relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8 md:mb-12"
+            className="mb-12"
           >
-            <h1 className="text-[13vw] md:text-[10vw] leading-[0.9] md:leading-[0.8] font-display font-bold text-slate-900 dark:text-white tracking-tighter mix-blend-difference break-words">
+            <h1 className="text-[12vw] md:text-[10vw] leading-[0.8] font-display font-bold text-slate-900 dark:text-white tracking-tighter mix-blend-difference">
               UI UX <br />
-              {/* Reduced margin on mobile to prevent overflow */}
-              <span className="ml-[5vw] md:ml-[10vw] text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400">Designer</span>
+              <span className="ml-[10vw] text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400">Designer</span>
             </h1>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mt-8 md:mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mt-12">
             <div className="hidden md:block md:col-span-1"></div>
 
             {/* Description Text */}
-            <div className="md:col-span-5 pt-0 md:pt-8">
+            <div className="md:col-span-5 pt-8">
               {/* Brand Logos */}
-              <div className="flex flex-wrap gap-3 md:gap-4 mb-8 md:mb-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+              <div className="flex flex-wrap gap-4 mb-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
                 {BRANDS.map((brand, i) => (
-                  <div key={i} className="px-3 py-1.5 md:px-4 md:py-2 bg-slate-100 dark:bg-slate-900 rounded-full text-xs md:text-sm font-bold text-slate-500 flex items-center gap-2">
+                  <div key={i} className="px-4 py-2 bg-slate-100 dark:bg-slate-900 rounded-full text-sm font-bold text-slate-500 flex items-center gap-2">
                     {brand.name}
                   </div>
                 ))}
               </div>
-              <p className="text-lg md:text-2xl font-light text-slate-600 dark:text-slate-300 max-w-sm leading-relaxed">
+              <p className="text-xl md:text-2xl font-light text-slate-600 dark:text-slate-300 max-w-sm leading-relaxed">
                 Crafting digital experiences that merge functionality with aesthetic perfection.
               </p>
             </div>
@@ -229,15 +228,15 @@ export const Home: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative aspect-[4/5] md:aspect-square w-full max-w-md ml-auto rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl"
+                className="relative aspect-[4/5] md:aspect-square w-full max-w-md ml-auto rounded-[3rem] overflow-hidden shadow-2xl"
               >
                 <img
                   src="/Assets/image.jpg"
                   alt="UIUX Designer"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />
-                <div className="absolute bottom-4 left-4 right-4 md:bottom-8 md:left-8 md:right-8 bg-white/10 backdrop-blur-xl border border-white/20 p-4 md:p-6 rounded-2xl md:rounded-3xl text-white">
-                  <p className="font-medium text-sm md:text-lg">
+                <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-3xl text-white">
+                  <p className="font-medium text-lg">
                     Hi, I'm Abhijith. Creating intuitive digital experiences for global brands.
                   </p>
                 </div>
@@ -248,32 +247,29 @@ export const Home: React.FC = () => {
       </section>
 
       {/* FIXED Tools & Skills Marquee */}
-      {/* Strictly wrap in max-w-[100vw] overflow-hidden to prevent rotated content from spilling */}
-      <div className="w-full max-w-[100vw] overflow-hidden relative">
-        <section className="py-12 bg-slate-900 dark:bg-white text-white dark:text-slate-900 overflow-hidden transform -rotate-1 origin-center scale-105 w-[102%] -ml-[1%]">
-          <div className="flex overflow-hidden">
-            <div className="flex animate-marquee whitespace-nowrap">
-              {[...SKILLS, ...SKILLS, ...SKILLS].map((skill, i) => (
-                <div key={i} className="flex items-center gap-4 mx-4 md:mx-8 text-2xl md:text-4xl font-display font-bold uppercase opacity-80 hover:opacity-100 transition-opacity">
-                  <span className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-current"></span>
-                  {skill.name}
-                </div>
-              ))}
-            </div>
-            <div className="flex animate-marquee whitespace-nowrap" aria-hidden="true">
-              {[...SKILLS, ...SKILLS, ...SKILLS].map((skill, i) => (
-                <div key={i} className="flex items-center gap-4 mx-4 md:mx-8 text-2xl md:text-4xl font-display font-bold uppercase opacity-80 hover:opacity-100 transition-opacity">
-                  <span className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-current"></span>
-                  {skill.name}
-                </div>
-              ))}
-            </div>
+      <section className="py-12 bg-slate-900 dark:bg-white text-white dark:text-slate-900 overflow-hidden transform -rotate-1 origin-left scale-105">
+        <div className="flex overflow-hidden">
+          <div className="flex animate-marquee whitespace-nowrap">
+            {[...SKILLS, ...SKILLS, ...SKILLS].map((skill, i) => (
+              <div key={i} className="flex items-center gap-4 mx-8 text-4xl font-display font-bold uppercase opacity-80 hover:opacity-100 transition-opacity">
+                <span className="w-3 h-3 rounded-full bg-current"></span>
+                {skill.name}
+              </div>
+            ))}
           </div>
-        </section>
-      </div>
+          <div className="flex animate-marquee whitespace-nowrap" aria-hidden="true">
+            {[...SKILLS, ...SKILLS, ...SKILLS].map((skill, i) => (
+              <div key={i} className="flex items-center gap-4 mx-8 text-4xl font-display font-bold uppercase opacity-80 hover:opacity-100 transition-opacity">
+                <span className="w-3 h-3 rounded-full bg-current"></span>
+                {skill.name}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 md:py-20 px-4 md:px-8 max-w-[1440px] mx-auto w-full">
+      <section id="about" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
         <div className="mb-12">
           <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
             About Me
@@ -282,38 +278,38 @@ export const Home: React.FC = () => {
           {/* Typewriter Effect Header */}
           <TypewriterText
             text="DDesign has always been more than just a job – it's my passion."
-            className="text-3xl md:text-6xl font-display font-medium text-slate-900 dark:text-white max-w-3xl leading-tight min-h-[1.2em]"
+            className="text-4xl md:text-6xl font-display font-medium text-slate-900 dark:text-white max-w-3xl leading-tight min-h-[1.2em]"
           />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative rounded-[2.5rem] overflow-hidden group cursor-pointer">
             <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
+              src="/Assets/work-image.png"
               alt="Working"
               className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-              <div className="w-16 h-16 md:w-24 md:h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center pl-1 transition-transform group-hover:scale-90 border border-white/30">
-                <Play fill="white" className="text-white w-8 h-8 md:w-10 md:h-10" />
+            {/* <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
+              <div className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center pl-1 transition-transform group-hover:scale-90 border border-white/30">
+                <Play fill="white" className="text-white w-10 h-10" />
               </div>
-            </div>
+            </div> */}
           </div>
 
-          <div className="space-y-8 md:space-y-12">
-            <p className="text-lg md:text-xl font-light text-slate-600 dark:text-slate-300">
+          <div className="space-y-12">
+            <p className="text-xl font-light text-slate-600 dark:text-slate-300">
               I am a passionate UI/UX designer focused on crafting user-centered, intuitive, and impactful digital experiences. With a blend of creativity and functionality, I design interfaces that engage users and achieve business goals. From research to prototyping, I thrive on solving problems through design, creating seamless interactions that connect people with brands and bring ideas to life.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
               <div>
-                <h3 className="text-5xl md:text-6xl font-display font-bold text-slate-900 dark:text-white mb-2">+320</h3>
+                <h3 className="text-6xl font-display font-bold text-slate-900 dark:text-white mb-2">+7</h3>
                 <p className="text-sm text-slate-500 font-medium tracking-wide uppercase">
                   Projects Completed
                 </p>
               </div>
               <div>
-                <h3 className="text-5xl md:text-6xl font-display font-bold text-slate-900 dark:text-white mb-2">+280</h3>
+                <h3 className="text-6xl font-display font-bold text-slate-900 dark:text-white mb-2">+20</h3>
                 <p className="text-sm text-slate-500 font-medium tracking-wide uppercase">
                   Designs
                 </p>
@@ -324,13 +320,13 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 md:py-20 px-4 md:px-8 max-w-[1440px] mx-auto w-full">
+      <section id="services" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4 lg:pr-8">
+          <div className="lg:col-span-4 pr-8">
             <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
               Services
             </span>
-            <h2 className="text-3xl md:text-5xl font-display font-medium text-slate-900 dark:text-white mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900 dark:text-white mb-6 leading-tight">
               A Comprehensive look at what we offer and how we deliver
             </h2>
             <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg">
@@ -346,7 +342,7 @@ export const Home: React.FC = () => {
               {SERVICES.map((service, index) => (
                 <div
                   key={index}
-                  className={`p-8 md:p-10 rounded-[2rem] flex flex-col justify-between min-h-[280px] md:min-h-[320px] group transition-all duration-300 ${service.highlight
+                  className={`p-10 rounded-[2rem] flex flex-col justify-between min-h-[320px] group transition-all duration-300 ${service.highlight
                     ? 'bg-slate-900 text-white'
                     : 'bg-slate-50 dark:bg-slate-900/50 hover:bg-slate-100 dark:hover:bg-slate-800'
                     }`}
@@ -373,12 +369,12 @@ export const Home: React.FC = () => {
       </section>
 
       {/* NEW Detailed Skills Section */}
-      <section className="py-16 md:py-20 px-4 md:px-8 max-w-[1440px] mx-auto w-full">
+      <section className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
         <div className="mb-12 text-center md:text-left">
           <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
             Technical Proficiency
           </span>
-          <h2 className="text-3xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight">
+          <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight">
             Tools & Technologies <br /> I work with daily
           </h2>
         </div>
@@ -414,13 +410,13 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-16 md:py-20 px-4 md:px-8 max-w-[1440px] mx-auto bg-slate-50 dark:bg-slate-900/20 rounded-[3rem] my-20 w-full">
+      <section id="experience" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto bg-slate-50 dark:bg-slate-900/20 rounded-[3rem] my-20">
         <div className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           <div>
             <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-dark-950 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
               Experience
             </span>
-            <h2 className="text-3xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight max-w-xl">
+            <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight max-w-xl">
               A Yearly snapshot of my creative growth
             </h2>
           </div>
@@ -464,14 +460,14 @@ export const Home: React.FC = () => {
       <FeatureExplorerShowcase />
 
       {/* Professional Projects (Job Work) - Horizontal Scroll */}
-      <section id="professional-work" className="py-20 px-0 md:px-8 w-full overflow-hidden border-t border-slate-200 dark:border-slate-800">
+      <section id="professional-work" className="py-20 px-4 md:px-8 w-full overflow-hidden border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-[1440px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 px-4 md:px-0">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div>
               <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
                 Professional Work
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight">
+              <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight">
                 Selected works from <br /> my professional career
               </h2>
             </div>
@@ -494,12 +490,12 @@ export const Home: React.FC = () => {
 
           <div
             ref={scrollRef}
-            className="flex overflow-x-auto gap-4 md:gap-8 pb-12 snap-x scrollbar-hide px-4 md:px-0"
+            className="flex overflow-x-auto gap-8 pb-12 snap-x scrollbar-hide -mx-4 px-4 md:-mx-8 md:px-8"
           >
             {JOB_PROJECTS.map((project, i) => (
               <div key={i} className="min-w-[85vw] md:min-w-[600px] snap-center">
                 {/* Image Container - Now Linked */}
-                <Link to={`/professional-work/${project.id}`} className="group relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden aspect-[16/9] mb-8 bg-slate-100 dark:bg-slate-900 block">
+                <Link to={`/professional-work/${project.id}`} className="group relative rounded-[2.5rem] overflow-hidden aspect-[16/9] mb-8 bg-slate-100 dark:bg-slate-900 block">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -516,21 +512,21 @@ export const Home: React.FC = () => {
                 {/* Details Below Thumbnail */}
                 <div className="flex justify-between items-start px-2">
                   <div className="space-y-2">
-                    <p className="text-xs md:text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    <p className="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                       {project.company} • {project.year}
                     </p>
                     <Link to={`/professional-work/${project.id}`}>
-                      <h3 className="text-2xl md:text-3xl font-display font-bold text-slate-900 dark:text-white hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+                      <h3 className="text-3xl font-display font-bold text-slate-900 dark:text-white hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
                         {project.title}
                       </h3>
                     </Link>
-                    <p className="text-slate-600 dark:text-slate-300 max-w-md line-clamp-2 text-base md:text-lg">
+                    <p className="text-slate-600 dark:text-slate-300 max-w-md line-clamp-2 text-lg">
                       {project.description}
                     </p>
                   </div>
 
-                  <Link to={`/professional-work/${project.id}`} className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-900 dark:text-white hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300">
-                    <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5" />
+                  <Link to={`/professional-work/${project.id}`} className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-900 dark:text-white hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300">
+                    <ArrowUpRight className="w-5 h-5" />
                   </Link>
                 </div>
               </div>
@@ -540,10 +536,10 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Auto-Rotating Testimonial Quote */}
-      <section className="py-20 md:py-32 px-4 md:px-8 max-w-5xl mx-auto text-center relative min-h-[400px] flex flex-col justify-center w-full">
+      <section className="py-32 px-4 md:px-8 max-w-5xl mx-auto text-center relative min-h-[400px] flex flex-col justify-center">
         <div className="text-6xl md:text-8xl text-slate-200 dark:text-slate-800 font-serif leading-none mb-8 opacity-50">“</div>
 
-        <div className="relative overflow-hidden w-full">
+        <div className="relative overflow-hidden">
           <AnimatePresence mode='wait'>
             <motion.div
               key={currentTestimonial}
@@ -552,7 +548,7 @@ export const Home: React.FC = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-xl md:text-4xl font-medium text-slate-900 dark:text-white italic leading-relaxed mb-12">
+              <h3 className="text-2xl md:text-4xl font-medium text-slate-900 dark:text-white italic leading-relaxed mb-12">
                 "{TESTIMONIALS[currentTestimonial].quote}"
               </h3>
 
@@ -581,16 +577,16 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Footer CTA */}
-      <section id="contact" className="bg-slate-900 dark:bg-black py-16 md:py-24 px-4 md:px-8 relative overflow-hidden w-full">
+      <section id="contact" className="bg-slate-900 dark:bg-black py-24 px-4 md:px-8 relative overflow-hidden">
         {/* Background Accents */}
-        <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div className="max-w-[1440px] mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24">
-            <h2 className="text-5xl md:text-[8rem] font-display font-bold text-white leading-[0.9] mb-8 md:mb-0 tracking-tighter break-words max-w-full">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24">
+            <h2 className="text-6xl md:text-[8rem] font-display font-bold text-white leading-[0.9] mb-8 md:mb-0 tracking-tighter">
               Let's Connect <br /> There
             </h2>
-            <a href={`mailto:alex.morgan@design.co`} className="flex items-center gap-4 px-8 py-4 md:px-10 md:py-5 bg-white rounded-full text-slate-900 hover:scale-105 transition-transform group font-bold text-base md:text-lg">
+            <a href={`mailto:alex.morgan@design.co`} className="flex items-center gap-4 px-10 py-5 bg-white rounded-full text-slate-900 hover:scale-105 transition-transform group font-bold text-lg">
               <span className="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-slate-900 group-hover:text-white transition-colors">
                 <ArrowRight className="w-4 h-4" />
               </span>
@@ -609,19 +605,19 @@ export const Home: React.FC = () => {
               <p className="text-slate-400 max-w-sm">Creating digital products that help businesses reach their goals and inspire users.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 text-sm text-slate-400">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-sm text-slate-400">
               <div>
-                <h4 className="font-bold text-white mb-4 md:mb-6 text-lg">Address</h4>
+                <h4 className="font-bold text-white mb-6 text-lg">Address</h4>
                 <p className="mb-2">Technology Park 7-12 Gumpang</p>
                 <p>Recidance 57292 Surakarta Indonesia</p>
               </div>
               <div>
-                <h4 className="font-bold text-white mb-4 md:mb-6 text-lg">Email Address</h4>
+                <h4 className="font-bold text-white mb-6 text-lg">Email Address</h4>
                 <p className="mb-2 hover:text-white transition-colors cursor-pointer">hallo@dewadewi.com</p>
                 <p className="hover:text-white transition-colors cursor-pointer">taskeye@gmail.com</p>
               </div>
               <div>
-                <h4 className="font-bold text-white mb-4 md:mb-6 text-lg">Phone Number</h4>
+                <h4 className="font-bold text-white mb-6 text-lg">Phone Number</h4>
                 <p className="mb-2 hover:text-white transition-colors cursor-pointer">(0271) 131 4564 232</p>
                 <p className="hover:text-white transition-colors cursor-pointer">082124720342342</p>
               </div>
@@ -640,7 +636,7 @@ export const Home: React.FC = () => {
                 <Youtube className="w-5 h-5" />
               </div>
             </div>
-            <div className="flex flex-wrap gap-4 md:gap-8 justify-center">
+            <div className="flex flex-wrap gap-8 justify-center">
               <span className="hover:text-white cursor-pointer transition-colors">Templates</span>
               <span className="hover:text-white cursor-pointer transition-colors">Tools</span>
               <span className="hover:text-white cursor-pointer transition-colors">Features</span>
