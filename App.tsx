@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { ProjectDetails } from './pages/ProjectDetails';
+import { JobProjectDetails } from '/pages/JobProjectDetails.tsx';
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project/:id" element={<ProjectDetails />} />
+          <Route path="/professional-work/:id" element={<JobProjectDetails />} />
         </Routes>
         <Footer />
       </div>

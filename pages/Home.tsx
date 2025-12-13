@@ -494,8 +494,8 @@ export const Home: React.FC = () => {
           >
             {JOB_PROJECTS.map((project, i) => (
               <div key={i} className="min-w-[85vw] md:min-w-[600px] snap-center">
-                {/* Image Container */}
-                <div className="group relative rounded-[2.5rem] overflow-hidden aspect-[16/9] mb-8 bg-slate-100 dark:bg-slate-900">
+                {/* Image Container - Now Linked */}
+                <Link to={`/professional-work/${project.id}`} className="group relative rounded-[2.5rem] overflow-hidden aspect-[16/9] mb-8 bg-slate-100 dark:bg-slate-900 block">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -507,7 +507,7 @@ export const Home: React.FC = () => {
                       View Case Study
                     </span>
                   </div>
-                </div>
+                </Link>
 
                 {/* Details Below Thumbnail */}
                 <div className="flex justify-between items-start px-2">
@@ -515,17 +515,19 @@ export const Home: React.FC = () => {
                     <p className="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                       {project.company} • {project.year}
                     </p>
-                    <h3 className="text-3xl font-display font-bold text-slate-900 dark:text-white">
-                      {project.title}
-                    </h3>
+                    <Link to={`/professional-work/${project.id}`}>
+                      <h3 className="text-3xl font-display font-bold text-slate-900 dark:text-white hover:text-slate-600 dark:hover:text-slate-300 transition-colors">
+                        {project.title}
+                      </h3>
+                    </Link>
                     <p className="text-slate-600 dark:text-slate-300 max-w-md line-clamp-2 text-lg">
                       {project.description}
                     </p>
                   </div>
 
-                  <div className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-900 dark:text-white group-hover:bg-slate-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-slate-900 transition-all duration-300">
+                  <Link to={`/professional-work/${project.id}`} className="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-900 dark:text-white hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300">
                     <ArrowUpRight className="w-5 h-5" />
-                  </div>
+                  </Link>
                 </div>
               </div>
             ))}

@@ -1,4 +1,4 @@
-import { Project, Experience, Education } from './types';
+import { Project, Experience, Education, JobProject } from './types';
 
 export const SOCIAL_LINKS = {
   github: "https://github.com",
@@ -118,15 +118,24 @@ export const PROJECTS: Project[] = [
   }
 ];
 
-export const JOB_PROJECTS = [
+export const JOB_PROJECTS: JobProject[] = [
   {
     id: "jp-1",
     title: "HealthTrack Pro",
     company: "TechFlow Solutions",
     role: "Lead Designer",
     year: "2023",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop",
-    description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%."
+    image: "Assets/BillerQ-CableTV_CRM.png",
+    description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
+    overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
+    deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
+    challenge: "The primary objective was to modernize the existing platform while ensuring zero disruption to the user base. We faced specific challenges regarding data visualization complexity and mobile responsiveness. The legacy system was cluttered, leading to patient anxiety.",
+    approach: "As the Lead Designer, I initiated the process with a deep dive into user analytics and stakeholder interviews. We conducted workshops with doctors and patients to align business goals with user needs.",
+    approachSteps: [
+      { number: "01", title: "Discovery", description: "Understanding the core problems through research and patient interviews." },
+      { number: "02", title: "Ideation", description: "Wireframing and prototyping multiple solutions with a mobile-first mindset." }
+    ],
+    solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system."
   },
   {
     id: "jp-2",
@@ -134,8 +143,17 @@ export const JOB_PROJECTS = [
     company: "CreativePulse Agency",
     role: "UX Researcher",
     year: "2022",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1470&auto=format&fit=crop",
-    description: "Conducted user research and wireframing for a regional bank's mobile banking application."
+    image: "Assets/2ndvahan.png",
+    description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
+    overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
+    deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
+    challenge: "The primary objective was to modernize the existing platform while ensuring zero disruption to the user base. We faced specific challenges regarding data visualization complexity and mobile responsiveness. The legacy system was cluttered, leading to patient anxiety.",
+    approach: "As the Lead Designer, I initiated the process with a deep dive into user analytics and stakeholder interviews. We conducted workshops with doctors and patients to align business goals with user needs.",
+    approachSteps: [
+      { number: "01", title: "Discovery", description: "Understanding the core problems through research and patient interviews." },
+      { number: "02", title: "Ideation", description: "Wireframing and prototyping multiple solutions with a mobile-first mindset." }
+    ],
+    solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system."
   },
   {
     id: "jp-3",
@@ -143,8 +161,17 @@ export const JOB_PROJECTS = [
     company: "TechFlow Solutions",
     role: "UI Designer",
     year: "2021",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2132&auto=format&fit=crop",
-    description: "Created the design system for an internal Learning Management System used by 5000+ employees."
+    image: "Assets/BillerQ-WaterCRM.png",
+    description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
+    overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
+    deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
+    challenge: "The primary objective was to modernize the existing platform while ensuring zero disruption to the user base. We faced specific challenges regarding data visualization complexity and mobile responsiveness. The legacy system was cluttered, leading to patient anxiety.",
+    approach: "As the Lead Designer, I initiated the process with a deep dive into user analytics and stakeholder interviews. We conducted workshops with doctors and patients to align business goals with user needs.",
+    approachSteps: [
+      { number: "01", title: "Discovery", description: "Understanding the core problems through research and patient interviews." },
+      { number: "02", title: "Ideation", description: "Wireframing and prototyping multiple solutions with a mobile-first mindset." }
+    ],
+    solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system."
   },
   {
     id: "jp-4",
@@ -152,8 +179,35 @@ export const JOB_PROJECTS = [
     company: "Freelance",
     role: "Product Designer",
     year: "2020",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    description: "Designed a logistics tracking dashboard for supply chain managers with real-time map visualization."
+    image: "Assets/ESSAR.png",
+    description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
+    overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
+    deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
+    challenge: "The primary objective was to modernize the existing platform while ensuring zero disruption to the user base. We faced specific challenges regarding data visualization complexity and mobile responsiveness. The legacy system was cluttered, leading to patient anxiety.",
+    approach: "As the Lead Designer, I initiated the process with a deep dive into user analytics and stakeholder interviews. We conducted workshops with doctors and patients to align business goals with user needs.",
+    approachSteps: [
+      { number: "01", title: "Discovery", description: "Understanding the core problems through research and patient interviews." },
+      { number: "02", title: "Ideation", description: "Wireframing and prototyping multiple solutions with a mobile-first mindset." }
+    ],
+    solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system."
+  },
+  {
+    id: "jp-4",
+    title: "LogiStream Analytics",
+    company: "Freelance",
+    role: "Product Designer",
+    year: "2020",
+    image: "Assets/RKS.png",
+    description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
+    overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
+    deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
+    challenge: "The primary objective was to modernize the existing platform while ensuring zero disruption to the user base. We faced specific challenges regarding data visualization complexity and mobile responsiveness. The legacy system was cluttered, leading to patient anxiety.",
+    approach: "As the Lead Designer, I initiated the process with a deep dive into user analytics and stakeholder interviews. We conducted workshops with doctors and patients to align business goals with user needs.",
+    approachSteps: [
+      { number: "01", title: "Discovery", description: "Understanding the core problems through research and patient interviews." },
+      { number: "02", title: "Ideation", description: "Wireframing and prototyping multiple solutions with a mobile-first mindset." }
+    ],
+    solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system."
   }
 ];
 

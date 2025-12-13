@@ -12,6 +12,22 @@ export interface Project {
   solution: string;
 }
 
+export interface JobProject {
+  id: string;
+  title: string;
+  company: string;
+  role: string;
+  year: string;
+  image: string;
+  description: string;
+  overview: string;
+  deliverables: string[];
+  challenge: string;
+  approach: string;
+  approachSteps: { number: string; title: string; description: string }[];
+  solution: string;
+}
+
 export interface Experience {
   id: string;
   role: string;
