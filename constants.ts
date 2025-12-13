@@ -79,7 +79,7 @@ export const PROJECTS: Project[] = [
     category: "Mobile Application",
     summary: "A bold, futuristic e-commerce app that blends immersive visuals with a seamless shopping experience.",
     description: "Gamecore is a concept project focused on designing a modern e-commerce app for gaming products. The goal was to combine a futuristic visual style with an effortless shopping journey for players.",
-    thumbnail: "Assets/gamecore.webp",
+    thumbnail: "/Assets/gamecore.webp",
     images: [
       "Assets/gamecoe-img1.png",
       "Assets/gamecoe-img2.png"
