@@ -192,7 +192,7 @@ export const JOB_PROJECTS: JobProject[] = [
     solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system."
   },
   {
-    id: "jp-4",
+    id: "jp-5",
     title: "LogiStream Analytics",
     company: "Freelance",
     role: "Product Designer",
