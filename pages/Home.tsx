@@ -285,33 +285,33 @@ export const Home: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative rounded-[2.5rem] overflow-hidden group cursor-pointer">
             <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
+              src="/Assets/work-image.png"
               alt="Working"
               className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
+            {/* <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
               <div className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center pl-1 transition-transform group-hover:scale-90 border border-white/30">
                 <Play fill="white" className="text-white w-10 h-10" />
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="space-y-12">
             <p className="text-xl font-light text-slate-600 dark:text-slate-300">
-              Design is not just a job for me, it's a passion that drives me. I believe that good design can solve problems and make people's lives easier.
+              I am a passionate UI/UX designer focused on crafting user-centered, intuitive, and impactful digital experiences. With a blend of creativity and functionality, I design interfaces that engage users and achieve business goals. From research to prototyping, I thrive on solving problems through design, creating seamless interactions that connect people with brands and bring ideas to life.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
               <div>
-                <h3 className="text-6xl font-display font-bold text-slate-900 dark:text-white mb-2">+320</h3>
+                <h3 className="text-6xl font-display font-bold text-slate-900 dark:text-white mb-2">+7</h3>
                 <p className="text-sm text-slate-500 font-medium tracking-wide uppercase">
                   Projects Completed
                 </p>
               </div>
               <div>
-                <h3 className="text-6xl font-display font-bold text-slate-900 dark:text-white mb-2">+280</h3>
+                <h3 className="text-6xl font-display font-bold text-slate-900 dark:text-white mb-2">+20</h3>
                 <p className="text-sm text-slate-500 font-medium tracking-wide uppercase">
-                  Happy Clients
+                  Designs
                 </p>
               </div>
             </div>

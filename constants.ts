@@ -4,28 +4,29 @@ export const SOCIAL_LINKS = {
   github: "https://github.com",
   linkedin: "https://linkedin.com",
   twitter: "https://twitter.com",
-  email: "alex.morgan@design.co"
+  email: "abhijithak3@gmail.com"
 };
 
 export const BRANDS = [
-  { name: "Zoom", icon: "zoom" },
-  { name: "Coinbase", icon: "coinbase" },
-  { name: "Spotify", icon: "spotify" },
-  { name: "Slack", icon: "slack" },
-  { name: "Dropbox", icon: "dropbox" },
+  { name: "Figma", icon: "figma" },
+  { name: "Sketch", icon: "sketch" },
+  { name: "Photoshop", icon: "photoshop" },
+  { name: "Illustrator", icon: "Illustrator" },
+  { name: "Webflow", icon: "webflow" },
 ];
 
 export const SKILLS = [
   { name: "Figma", level: "Expert", category: "Design" },
   { name: "Adobe XD", level: "Expert", category: "Design" },
-  { name: "Protopie", level: "Advanced", category: "Prototyping" },
-  { name: "React", level: "Intermediate", category: "Development" },
-  { name: "Tailwind CSS", level: "Advanced", category: "Development" },
+  { name: "Sketch", level: "Expert", category: "Design" },
+  { name: "HTML/CSS", level: "Intermediate", category: "Development" },
+  { name: "JS", level: "Advanced", category: "Development" },
+  { name: "Adobe Photoshop", level: "Advanced", category: "Motion" },
+  { name: "Adobe Illustrtor", level: "Expert", category: "Productivity" },
   { name: "Webflow", level: "Expert", category: "Development" },
   { name: "Blender", level: "Intermediate", category: "3D" },
-  { name: "After Effects", level: "Advanced", category: "Motion" },
-  { name: "Notion", level: "Expert", category: "Productivity" },
-  { name: "Jira", level: "Advanced", category: "Productivity" },
+  { name: "Notion", level: "Advanced", category: "Productivity" },
+  { name: "Protopie", level: "Advanced", category: "Prototyping" },
 ];
 
 export const SERVICES = [
