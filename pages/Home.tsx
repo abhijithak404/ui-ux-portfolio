@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { PROJECTS, EXPERIENCE, SERVICES, JOB_PROJECTS, BRANDS, SKILLS, TESTIMONIALS } from '../constants';
-import { ArrowRight, ArrowUpRight, Play, Twitter, Instagram, Youtube, Layout, ExternalLink, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
+import {
+  ArrowRight, ArrowUpRight, Play, Twitter, Instagram, Youtube, Layout, ExternalLink,
+  ChevronLeft, ChevronRight, ArrowLeft,
+  // Custom Skill Icons
+  Figma, PenTool, Smartphone, Code2, Globe, Box, FileText, Zap, Gem, Braces, Image, Feather
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { Particles } from '../components/Particles';
@@ -118,7 +123,7 @@ const FeatureExplorerShowcase: React.FC = () => {
             <span className="px-4 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block uppercase tracking-wider mb-4">
               Selected Works
             </span>
-            <h2 className="text-5xl md:text-7xl font-display font-bold text-slate-900 dark:text-white leading-tight">
+            <h2 className="text-4xl md:text-5xl font-display font-medium text-slate-900 dark:text-white leading-tight">
               Featured <br /> Capabilities
             </h2>
           </div>
@@ -181,6 +186,23 @@ export const Home: React.FC = () => {
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
       });
+    }
+  };
+
+  const getSkillIcon = (skillName: string) => {
+    switch (skillName) {
+      case "Figma": return <Figma size={24} strokeWidth={1.5} />;
+      case "Adobe XD": return <PenTool size={24} strokeWidth={1.5} />;
+      case "Sketch": return <Gem size={24} strokeWidth={1.5} />;
+      case "HTML/CSS": return <Code2 size={24} strokeWidth={1.5} />;
+      case "JS": return <Braces size={24} strokeWidth={1.5} />;
+      case "Adobe Photoshop": return <Image size={24} strokeWidth={1.5} />;
+      case "Adobe Illustrator": return <Feather size={24} strokeWidth={1.5} />;
+      case "Webflow": return <Globe size={24} strokeWidth={1.5} />;
+      case "Blender": return <Box size={24} strokeWidth={1.5} />;
+      case "Notion": return <FileText size={24} strokeWidth={1.5} />;
+      case "Protopie": return <Smartphone size={24} strokeWidth={1.5} />;
+      default: return <Zap size={24} strokeWidth={1.5} />;
     }
   };
 
@@ -393,7 +415,8 @@ export const Home: React.FC = () => {
             >
               <div className="flex justify-between items-start mb-4">
                 <div className="p-3 bg-slate-100 dark:bg-slate-800 rounded-xl text-slate-900 dark:text-white">
-                  <Layout size={24} strokeWidth={1.5} />
+                  {/* Use Custom Icon Helper */}
+                  {getSkillIcon(skill.name)}
                 </div>
                 <span className={`px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full ${skill.level === 'Expert' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' :
                   skill.level === 'Advanced' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' :
