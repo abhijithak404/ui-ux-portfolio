@@ -26,6 +26,11 @@ export interface JobProject {
   approach: string;
   approachSteps: { number: string; title: string; description: string }[];
   solution: string;
+  links?: {
+    web?: string;
+    ios?: string;
+    android?: string;
+  };
 }
 
 export interface Experience {

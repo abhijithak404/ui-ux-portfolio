@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { JOB_PROJECTS } from '../constants';
-import { ArrowLeft, Calendar, Briefcase, Building2, Layout } from 'lucide-react';
+import { ArrowLeft, Calendar, Briefcase, Building2, Layout, ExternalLink, Globe, Smartphone, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const JobProjectDetails: React.FC = () => {
@@ -104,7 +104,7 @@ export const JobProjectDetails: React.FC = () => {
                                 {project.overview}
                             </p>
 
-                            <div className="p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+                            <div className="p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 mb-8">
                                 <h4 className="font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
                                     <Layout className="w-5 h-5" /> Key Deliverables
                                 </h4>
@@ -117,6 +117,53 @@ export const JobProjectDetails: React.FC = () => {
                                     ))}
                                 </ul>
                             </div>
+
+                            {/* PROJECT LINKS SECTION */}
+                            {project.links && (
+                                <div className="p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+                                    <h4 className="font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+                                        <ExternalLink className="w-5 h-5" /> Live Project
+                                    </h4>
+                                    <div className="space-y-3">
+                                        {project.links.web && (
+                                            <a href={project.links.web} target="_blank" rel="noreferrer" className="flex items-center gap-3 w-full p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-slate-900 dark:hover:border-white transition-colors group">
+                                                <div className="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg group-hover:bg-slate-200 dark:group-hover:bg-slate-600 transition-colors">
+                                                    <Globe className="w-5 h-5 text-slate-900 dark:text-white" />
+                                                </div>
+                                                <div className="flex-1">
+                                                    <span className="block text-sm font-bold text-slate-900 dark:text-white">Website</span>
+                                                    <span className="block text-xs text-slate-500">View Live Site</span>
+                                                </div>
+                                                <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white" />
+                                            </a>
+                                        )}
+                                        {project.links.ios && (
+                                            <a href={project.links.ios} target="_blank" rel="noreferrer" className="flex items-center gap-3 w-full p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-slate-900 dark:hover:border-white transition-colors group">
+                                                <div className="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg group-hover:bg-slate-200 dark:group-hover:bg-slate-600 transition-colors">
+                                                    <Smartphone className="w-5 h-5 text-slate-900 dark:text-white" />
+                                                </div>
+                                                <div className="flex-1">
+                                                    <span className="block text-sm font-bold text-slate-900 dark:text-white">iOS App</span>
+                                                    <span className="block text-xs text-slate-500">App Store</span>
+                                                </div>
+                                                <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white" />
+                                            </a>
+                                        )}
+                                        {project.links.android && (
+                                            <a href={project.links.android} target="_blank" rel="noreferrer" className="flex items-center gap-3 w-full p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-slate-900 dark:hover:border-white transition-colors group">
+                                                <div className="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg group-hover:bg-slate-200 dark:group-hover:bg-slate-600 transition-colors">
+                                                    <Smartphone className="w-5 h-5 text-slate-900 dark:text-white" />
+                                                </div>
+                                                <div className="flex-1">
+                                                    <span className="block text-sm font-bold text-slate-900 dark:text-white">Android App</span>
+                                                    <span className="block text-xs text-slate-500">Google Play</span>
+                                                </div>
+                                                <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white" />
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
 
