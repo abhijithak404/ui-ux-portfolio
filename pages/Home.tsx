@@ -266,7 +266,7 @@ export const Home: React.FC = () => {
                 className="relative aspect-[4/5] md:aspect-square w-full max-w-md ml-auto rounded-[3rem] overflow-hidden shadow-2xl"
               >
                 <img
-                  src="/Assets/image1.png"
+                  src="Assets/image1.webp"
                   alt="UIUX Designer"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />
