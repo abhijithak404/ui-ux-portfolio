@@ -6,7 +6,7 @@ import {
   // Custom Skill Icons
   Figma, PenTool, Smartphone, Code2, Globe, Box, FileText, Zap, Gem, Braces, Image, Feather
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { Particles } from '../components/Particles';
 import { Project } from '../types';
@@ -371,7 +371,7 @@ export const Home: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative rounded-[2.5rem] overflow-hidden group cursor-pointer">
             <img
-              src="/Assets/work-image.webp"
+              src={aboutimage}
               alt="Working"
               className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
             />

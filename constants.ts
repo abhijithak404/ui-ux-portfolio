@@ -1,4 +1,7 @@
 import { Project, Experience, Education, JobProject } from './types';
+// --- ASSET IMPORTS ---
+// Please ensure these files exist in your 'assets' folder
+import projectNovaThumb from './Assets/image1.png';
 
 export const SOCIAL_LINKS = {
   github: "https://github.com",

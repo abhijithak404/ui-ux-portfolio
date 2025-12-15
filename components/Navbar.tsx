@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Moon, Sun, Eye } from 'lucide-react';
 import path from 'path';
 
@@ -8,6 +8,8 @@ export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -38,14 +40,42 @@ export const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'Services', path: '/#services' },
-    { name: 'About', path: '/#about' },
+    { name: 'Services', id: 'services' },
+    { name: 'About', id: 'about' },
     // { name: 'Skills', path: '/#skills' },
     // { name: 'Experience', path: '/#experience' },
-    { name: 'Works', path: '/#work' },
-    { name: 'Projects', path: '/#professional-work' },
-    { name: 'Contact', path: '/#contact' },
+    { name: 'Works', id: 'work' },
+    { name: 'Projects', id: 'professional-work' },
+    { name: 'Contact', id: 'contact' },
   ];
+
+  const handleNavClick = (id: string) => {
+    setIsOpen(false);
+    if (location.pathname === '/') {
+      scrollToSection(id);
+    } else {
+      navigate('/', { state: { targetId: id } });
+    }
+  };
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 100; // Navbar height + padding
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  const handleLogoClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
@@ -58,6 +88,8 @@ export const Navbar: React.FC = () => {
         {/* Logo */}
         <Link
           to="/"
+          onClick={handleLogoClick}
+
           className="flex items-center gap-2 text-xl font-display font-bold text-slate-900 dark:text-white"
         >
           <div className="w-8 h-8 bg-slate-900 dark:bg-white rounded-full flex items-center justify-center">
@@ -69,13 +101,13 @@ export const Navbar: React.FC = () => {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center space-x-6 bg-slate-100 dark:bg-slate-900/50 px-8 py-2 rounded-full backdrop-blur-md">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.path}
-              className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+              onClick={() => handleNavClick(link.id)}
+              className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer"
             >
               {link.name}
-            </a>
+            </button>
           ))}
         </div>
 
@@ -83,7 +115,7 @@ export const Navbar: React.FC = () => {
         <div className="hidden lg:flex items-center gap-3">
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-white"
+            className="p-2.5 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-white cursor-pointer"
             aria-label="Toggle Theme"
           >
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
@@ -103,13 +135,13 @@ export const Navbar: React.FC = () => {
         <div className="lg:hidden flex items-center gap-3">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white"
+            className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white cursor-pointer"
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white"
+            className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white cursor-pointer"
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -121,14 +153,13 @@ export const Navbar: React.FC = () => {
         <div className="fixed inset-0 z-40 bg-white/95 dark:bg-dark-950/95 backdrop-blur-xl pt-32 px-6 lg:hidden overflow-y-auto">
           <div className="flex flex-col gap-6 text-center pb-12">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.path}
-                onClick={() => setIsOpen(false)}
-                className="text-3xl font-display font-bold text-slate-900 dark:text-white"
+                onClick={() => handleNavClick(link.id)}
+                className="text-3xl font-display font-bold text-slate-900 dark:text-white cursor-pointer"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
             <a
               href="Assets/Abhijith-Ak-Resume.pdf"
