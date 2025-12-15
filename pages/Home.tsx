@@ -12,6 +12,22 @@ import { Particles } from '../components/Particles';
 import { Project } from '../types';
 import heroimage from '../Assets/image1.webp';
 import aboutimage from '../Assets/work-image.webp';
+import secondvahan from '../Assets/2ndvahan.webp';
+import billerq_cabletv from '../Assets/BillerQ-CableTV_CRM.webp';
+import billerq_watercrm from '../Assets/BillerQ-WaterCRM.webp';
+import dopack_img1 from '../Assets/DoPack-img1.webp';
+import dopack_img2 from '../Assets/DoPack-img2.webp';
+import dopack_thumb from '../Assets/dopack.webp';
+import education from '../Assets/Education.png';
+import eduspark_img1 from '../Assets/eduspark-folio-img1.webp';
+import eduspark_img2 from '../Assets/eduspark-folio-img2.png';
+import eduspark_thumb from '../Assets/eduspark.webp';
+import essar from '../Assets/ESSAR.webp';
+import gamecore_img1 from '../Assets/gamecoe-img1.png';
+import gamecore_img2 from '../Assets/gamecoe-img2.png';
+import rks from '../Assets/RKS.webp'
+
+
 
 // Custom SVG Icons for brands missing in standard sets or to ensure consistency
 const XIcon = ({ className }: { className?: string }) => (
