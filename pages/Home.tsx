@@ -12,7 +12,6 @@ import { Particles } from '../components/Particles';
 import { Project } from '../types';
 import heroimage from '../Assets/image1.webp';
 import aboutimage from '../Assets/work-image.webp';
-import 
 
 // Custom SVG Icons for brands missing in standard sets or to ensure consistency
 const XIcon = ({ className }: { className?: string }) => (
@@ -307,7 +306,7 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
+      <div id="services" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4 pr-8">
             <span className="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-800 text-sm font-bold text-slate-900 dark:text-white inline-block mb-6 uppercase tracking-wider">
@@ -353,7 +352,7 @@ export const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
