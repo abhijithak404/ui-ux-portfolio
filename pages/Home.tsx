@@ -12,6 +12,7 @@ import { Particles } from '../components/Particles';
 import { Project } from '../types';
 import heroimage from '../Assets/image1.webp';
 import aboutimage from '../Assets/work-image.webp';
+import 
 
 // Custom SVG Icons for brands missing in standard sets or to ensure consistency
 const XIcon = ({ className }: { className?: string }) => (
