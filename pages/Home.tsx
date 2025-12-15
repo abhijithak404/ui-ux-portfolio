@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { Particles } from '../components/Particles';
 import { Project } from '../types';
+import heroimage from '../Assets/image1.png'
 
 // Custom SVG Icons for brands missing in standard sets or to ensure consistency
 const XIcon = ({ className }: { className?: string }) => (
@@ -266,7 +267,7 @@ export const Home: React.FC = () => {
                 className="relative aspect-[4/5] md:aspect-square w-full max-w-md ml-auto rounded-[3rem] overflow-hidden shadow-2xl"
               >
                 <img
-                  src="Assets/image1.webp"
+                  src={heroimage}
                   alt="UIUX Designer"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 />
