@@ -60,9 +60,9 @@ export const SERVICES = [
 
 export const TESTIMONIALS = [
   {
-    quote: "As a small team, we couldn’t have done this without Abhijith. His thoughtful brand research, clear content planning, and regular weekly feedback kept the project focused, efficient, and on track.",
-    author: "Dhimmo Reijnder",
-    role: "Founder, The Dewa",
+    quote: "I had the opportunity to work closely with Abhijith, where he focused on UI/UX design and I handled frontend development. His designs consistently made development seamless, as they were well-structured, practical, and highly user-friendly. He brings a strong creative vision, attention to detail, and a collaborative mindset that makes working with him both productive and enjoyable. I’d definitely recommend Abhijith as a UI/UX designer ",
+    author: "Abhinand PK",
+    role: "React Developer, Quadleo Techno Solutions",
     image: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {

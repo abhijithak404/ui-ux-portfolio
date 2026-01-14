@@ -765,12 +765,12 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="flex flex-col items-center pt-12 mt-12 border-t border-white/5 text-sm text-slate-500">
-            <div className="flex flex-wrap gap-4 md:gap-8 justify-center mb-6">
+            {/* <div className="flex flex-wrap gap-4 md:gap-8 justify-center mb-6">
               <span className="hover:text-white cursor-pointer transition-colors">Templates</span>
               <span className="hover:text-white cursor-pointer transition-colors">Tools</span>
               <span className="hover:text-white cursor-pointer transition-colors">Features</span>
               <span className="hover:text-white cursor-pointer transition-colors">About Us</span>
-            </div>
+            </div> */}
             <p>All rights reserved @Abhijith</p>
           </div>
         </div>
