@@ -102,11 +102,8 @@ export const PROJECTS: Project[] = [
     category: "Website Design",
     summary: "A seamless courier booking and tracking web experience — designed to make delivery management fast, clear, and effortless.",
     description: "This project focuses on designing a modern and user-friendly courier booking platform that simplifies the process of sending and tracking shipments. The goal was to create a clean, reliable, and easy-to-navigate interface for customers and admins.",
-    thumbnail: "Assets/dopack.webp",
-    images: [
-      "Assets/DoPack-img1.webp",
-      "Assets/DoPack-img2.webp"
-    ],
+    thumbnail: dopack_thumb,
+    images: [dopack_img1, dopack_img2],
     technologies: ["Figma", "Photoshop", "Illustrator"],
     figma: "https://www.figma.com/design/0yRClX9rb1satfG7XVLfqA/Courier-Booking?node-id=0-1&p=f&t=xC0yuYnrU2ELAp0q-0",
     challenge: "Trust is a major barrier in P2P travel services. The app needed to convey safety and authenticity immediately.",
