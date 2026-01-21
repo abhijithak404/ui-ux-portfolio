@@ -144,7 +144,7 @@ export const ProjectDetails: React.FC = () => {
             View on Behance <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <div>
-            <Link to="/" className="text-slate-500 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors">
+            <Link to="#professional-work" className="text-slate-500 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors">
               or return to all projects
             </Link>
           </div>

@@ -21,6 +21,9 @@ import billerq_watercrm from './Assets/BillerQ-WaterCRM.webp';
 import essar from './Assets/ESSAR.webp';
 import rks from './Assets/RKS.webp';
 
+import abhilash from './Assets/Abhilash.jpeg';
+import ashiqu from './Assets/Ashiqu.jpeg';
+
 export const SOCIAL_LINKS = {
   github: "https://github.com",
   linkedin: "https://www.linkedin.com/in/abhijithak/",
@@ -74,22 +77,22 @@ export const SERVICES = [
 
 export const TESTIMONIALS = [
   {
-    quote: "I had the opportunity to work closely with Abhijith, where he focused on UI/UX design and I handled frontend development. His designs consistently made development seamless, as they were well-structured, practical, and highly user-friendly. He brings a strong creative vision, attention to detail, and a collaborative mindset that makes working with him both productive and enjoyable. I’d definitely recommend Abhijith as a UI/UX designer ",
+    quote: "I had the opportunity to work closely with Abhijith, where he focused on UI/UX design and I handled frontend development. His designs consistently made development seamless, as they were well-structured, practical, and highly user-friendly. He brings a strong creative vision, attention to detail, and a collaborative mindset that makes working with him both productive and enjoyable.",
     author: "Abhinand PK",
     role: "React Developer, Quadleo Techno Solutions",
     image: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
-    quote: "The team’s user-first approach and design precision completely reshaped our product. Engagement increased by 200% within the first month, making a measurable business impact.",
-    author: "Sarah Jenks",
-    role: "CTO, FinFlow",
-    image: "https://randomuser.me/api/portraits/women/44.jpg"
+    quote: "Abhijith AK is a highly talented UI/UX designer with a knack for creating simple, minimal, and user-friendly designs. His work carries a professional touch, ensuring a seamless experience for users while maintaining clean aesthetics. With a strong understanding of usability and functionality, he consistently delivers designs that are both visually appealing and intuitive. His ability to blend creativity with practicality makes him a valuable asset in any design team.",
+    author: "Ashiqu Ali",
+    role: "Flutter Developer, Quadleo Techno Solutions",
+    image: ashiqu
   },
   {
-    quote: "Exceptional creativity mixed with deep technical understanding. Duwy bridged the gap between our design and engineering teams effortlessly, resulting in a flawless product release.",
-    author: "Marcus Chen",
-    role: "Product Director, TechSpace",
-    image: "https://randomuser.me/api/portraits/men/67.jpg"
+    quote: "I worked with Abhijith at Quadleo Techno Solutions, and he’s an excellent UI/UX designer. His designs are clean, intuitive, and strongly aligned with material design and mobile-first principles, making development smooth and efficient. As a Flutter developer, I really appreciate how practical and well-structured his prototypes are—there’s always clarity when translating them into code. He’s also a great collaborator, open to feedback, and genuinely focused on delivering the best user experience.",
+    author: "Abhilash P",
+    role: "Software Engineer, Ahex Technologies",
+    image: abhilash
   }
 ];
 
