@@ -319,6 +319,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+
       {/* Services Section */}
       <div id="services" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
