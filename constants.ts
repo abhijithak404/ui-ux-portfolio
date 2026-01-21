@@ -15,6 +15,11 @@ import gamecoreImg1 from "./Assets/gamecoe-img1.png";
 import gamecoreImg2 from "./Assets/gamecoe-img2.png";
 import gamecoreThumb from "./Assets/gamecore.webp";
 
+import secondvahan from './Assets/2ndvahan.webp';
+import billerq_cabletv from './Assets/BillerQ-CableTV_CRM.webp';
+import billerq_watercrm from './Assets/BillerQ-WaterCRM.webp';
+import essar from './Assets/ESSAR.webp';
+import rks from './Assets/RKS.webp';
 
 export const SOCIAL_LINKS = {
   github: "https://github.com",
@@ -141,7 +146,7 @@ export const JOB_PROJECTS: JobProject[] = [
     company: "Quadleo Techno Solutions",
     role: "UI UX Designer",
     year: "2024",
-    image: "Assets/BillerQ-CableTV_CRM.webp",
+    image: billerq_cabletv,
     description: "BillerQ – Cable TV CRM is a comprehensive customer and service management platform built for cable TV and broadband operators. The system includes multiple role-based applications designed to simplify subscription management, billing, payments, and customer support workflows while improving operational efficiency and user satisfaction.",
     overview: "BillerQ was designed as an all-in-one CRM ecosystem serving customers, agents, and support teams. The platform focuses on reducing manual work, improving response times for complaints, and providing users with a seamless experience across mobile applications. The UI/UX design emphasizes clarity, speed, and ease of use for both end customers and operational staff.",
     deliverables: ['End-to-end UI/UX design for 3 mobile applications', 'Low-fidelity and high-fidelity wireframes', 'Interactive prototypes for key user flows', 'Design system (colors, typography, components)', 'User journey maps and task flows', 'Developer-ready UI screens'],
@@ -164,7 +169,7 @@ export const JOB_PROJECTS: JobProject[] = [
     company: "Quadleo Techno Solutions",
     role: "UI UX Designer",
     year: "2024",
-    image: "Assets/2ndvahan.webp",
+    image: secondvahan,
     description: "2nd Vahan is a digital used-vehicle selling platform that connects customers, dealerships, and internal teams through a unified multi-platform system. The platform streamlines vehicle listing, inspection, approval, and sales processes while providing customers with an easy and transparent way to browse and inquire about used vehicles.",
     overview: "2nd Vahan was designed as an end-to-end vehicle marketplace with role-based applications for administrators, staff, and customers. The focus of the UI/UX design was to simplify complex operational workflows, ensure data accuracy across platforms, and deliver a smooth browsing experience for customers. The design emphasizes trust, clarity, and ease of navigation across web and mobile interfaces.",
     deliverables: ['UI/UX design for Admin Web App, Staff Mobile App, and Customer Mobile App', 'User research insights and role-based user flows', 'Low-fidelity and high-fidelity wireframes', 'Interactive prototypes for key workflows', 'Responsive and accessible UI components', 'Design handoff assets for development'],
@@ -189,7 +194,7 @@ export const JOB_PROJECTS: JobProject[] = [
     company: "Quadleo Techno Solutions",
     role: "UI UX Designer",
     year: "2025",
-    image: "Assets/ESSAR.webp",
+    image: essar,
     description: "Healthcare HR is a comprehensive workforce and recruitment management system designed for healthcare staffing agencies. The platform enables agencies to efficiently match hospital manpower requirements with qualified healthcare professionals, while providing end-to-end tools for recruitment, attendance tracking, timesheets, and workforce administration.",
     overview: "Healthcare HR was designed as a role-based platform serving administrators, healthcare agencies, hospitals, and healthcare professionals. The system supports the complete staffing lifecycle—from candidate registration and job application to attendance submission, timesheet approval, and invoicing. The UI/UX design focuses on clarity, compliance, and efficiency in managing large volumes of healthcare workforce data.",
     deliverables: ['UI/UX design for Admin Web Application', 'UI/UX design for Healthcare Professionals’ Mobile App', 'User flows and role-based journey mapping', 'Low-fidelity and high-fidelity wireframes', 'Interactive prototypes for key workflows', 'Scalable UI components and design system', 'Developer handoff assets'],
@@ -212,7 +217,7 @@ export const JOB_PROJECTS: JobProject[] = [
     company: "Quadleo Techno Solutions",
     role: "UI UX Designer",
     year: "2024",
-    image: "Assets/RKS.webp",
+    image: rks,
     description: "RKS is a comprehensive waste management application designed to digitize and streamline waste collection operations for municipalities and service providers. The platform connects administrators, customers, field agents, and drivers through a unified system to improve operational efficiency, service transparency, and user engagement.",
     overview: "The RKS platform was designed as a multi-role ecosystem consisting of an Admin Web App and multiple mobile applications for customers, agents, and drivers. The system supports end-to-end waste management workflows—from service requests and task assignments to collection tracking and real-time updates. The UI/UX design emphasizes simplicity, accessibility, and efficient task execution across all user roles.",
     deliverables: ['UI/UX design for Admin Web App, Customer Mobile App, Agent Mobile App, and Driver Mobile App', 'Role-based user flows and journey maps', 'Low-fidelity and high-fidelity wireframes', 'Interactive prototypes for key workflows', 'Accessible and responsive UI components', 'Design system and developer handoff assets'],

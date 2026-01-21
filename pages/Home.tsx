@@ -12,9 +12,7 @@ import { Particles } from '../components/Particles';
 import { Project } from '../types';
 import heroimage from '../Assets/image1.webp';
 import aboutimage from '../Assets/work-image.webp';
-import secondvahan from '../Assets/2ndvahan.webp';
-import billerq_cabletv from '../Assets/BillerQ-CableTV_CRM.webp';
-import billerq_watercrm from '../Assets/BillerQ-WaterCRM.webp';
+
 
 import education from '../Assets/Education.png';
 
