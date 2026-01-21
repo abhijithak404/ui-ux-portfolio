@@ -7,6 +7,10 @@ import dopack_img1 from './Assets/DoPack-img1.webp';
 import dopack_img2 from './Assets/DoPack-img2.webp';
 import dopack_thumb from './Assets/dopack.webp';
 
+import eduspark_img1 from './Assets/eduspark-folio-img1.webp';
+import eduspark_img2 from './Assets/eduspark-folio-img2.png';
+import eduspark_thumb from './Assets/eduspark.webp';
+
 
 export const SOCIAL_LINKS = {
   github: "https://github.com",
@@ -116,10 +120,9 @@ export const PROJECTS: Project[] = [
     category: "Mobile Application",
     summary: "Learn. Grow. Achieve.",
     description: "Eduspark is an online learning platform that allows students and professionals to explore, purchase, and learn from a wide range of courses. The app supports both free and paid learning, complete with progress tracking and certificate generation.",
-    thumbnail: "Assets/eduspark.webp",
+    thumbnail: eduspark_thumb,
     images: [
-      "Assets/eduspark-folio-img1.webp",
-      "Assets/eduspark-folio-img2.png"
+      eduspark_img1, eduspark_img2
     ],
     technologies: ["Figma", "Photoshop", "Illustrator"],
     figma: "https://www.figma.com/design/Z4Aiv4TVx10JTa6Pp59Vu6/Untitled?node-id=0-1&p=f&t=yJtgFnz8YrSIsVCW-0",

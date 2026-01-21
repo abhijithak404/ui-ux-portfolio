@@ -17,9 +17,7 @@ import billerq_cabletv from '../Assets/BillerQ-CableTV_CRM.webp';
 import billerq_watercrm from '../Assets/BillerQ-WaterCRM.webp';
 
 import education from '../Assets/Education.png';
-import eduspark_img1 from '../Assets/eduspark-folio-img1.webp';
-import eduspark_img2 from '../Assets/eduspark-folio-img2.png';
-import eduspark_thumb from '../Assets/eduspark.webp';
+
 import essar from '../Assets/ESSAR.webp';
 import gamecoreImg1 from "../Assets/gamecoe-img1.png";
 import gamecoreImg2 from "../Assets/gamecoe-img2.png";
