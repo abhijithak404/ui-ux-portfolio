@@ -132,14 +132,22 @@ export const ProjectDetails: React.FC = () => {
           <img src={project.images[1]} alt="Project Detail" className="w-full h-auto" />
         </motion.div>
 
-        {/* Next Project Nav (Simple) */}
-        <div className="text-center pt-12 border-t border-slate-200 dark:border-slate-800">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white hover:text-primary-500 dark:hover:text-primary-400 transition-colors"
+        {/* Next Project Nav (Behance Focus) */}
+        <div className="text-center pt-12 border-t border-slate-200 dark:border-slate-800 space-y-6">
+          <a
+            href={project.behance || SOCIAL_LINKS.behance}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold text-lg hover:scale-105 transition-transform group"
           >
-            See all projects <ArrowRight className="w-5 h-5" />
-          </Link>
+            <BehanceIcon />
+            View on Behance <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </a>
+          <div>
+            <Link to="/" className="text-slate-500 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors">
+              or return to all projects
+            </Link>
+          </div>
         </div>
 
       </article>

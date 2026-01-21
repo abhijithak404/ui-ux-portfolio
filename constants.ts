@@ -106,6 +106,7 @@ export const PROJECTS: Project[] = [
     ],
     technologies: ["Figma", "Photoshop", "Illustrator"],
     figma: "https://www.figma.com/design/xYAbDBHJYt4YAUpDJHVPA3/GameCore?node-id=0-1&t=DT4UVJVfU3DTfXmV-1",
+    behance: "https://www.behance.net/gallery/example/nova",
     challenge: "To design a visually striking interface that reflects gaming culture while keeping the e-commerce experience intuitive and fast. Balancing style with usability was key.",
     solution: "The solution focused on creating a visually engaging yet highly functional shopping experience. A dark, futuristic theme with neon accents was combined with clear layouts and intuitive navigation, ensuring users could explore and purchase products effortlessly. Every interaction was designed to feel smooth, responsive, and true to the energy of gaming culture."
   },
@@ -119,6 +120,7 @@ export const PROJECTS: Project[] = [
     images: [dopack_img1, dopack_img2],
     technologies: ["Figma", "Photoshop", "Illustrator"],
     figma: "https://www.figma.com/design/0yRClX9rb1satfG7XVLfqA/Courier-Booking?node-id=0-1&p=f&t=xC0yuYnrU2ELAp0q-0",
+    behance: "https://www.behance.net/gallery/235973605/Courier-Service-Website-Booking-Tracking-Platform",
     challenge: "Trust is a major barrier in P2P travel services. The app needed to convey safety and authenticity immediately.",
     solution: "Introduced 'Video Introductions' for guides and a transparent review system that highlights specific attributes like 'punctuality' and 'local knowledge'."
   },
@@ -134,6 +136,7 @@ export const PROJECTS: Project[] = [
     ],
     technologies: ["Figma", "Photoshop", "Illustrator"],
     figma: "https://www.figma.com/design/Z4Aiv4TVx10JTa6Pp59Vu6/Untitled?node-id=0-1&p=f&t=yJtgFnz8YrSIsVCW-0",
+    behance: "https://www.behance.net/gallery/example/nova",
     challenge: "Design a learning platform that presents a wide variety of courses without overwhelming users, while ensuring a smooth flow from discovery to certification. The experience needed to stay intuitive, engaging, and easy to navigate for learners of all levels.",
     solution: "I designed Eduspark with a clear, learner-focused interface that simplifies course exploration and makes learning sessions smooth and distraction-free. The visual hierarchy, clean navigation, and structured layouts help users quickly find courses, track their progress, and earn certificates with ease."
   }
@@ -213,13 +216,13 @@ export const JOB_PROJECTS: JobProject[] = [
   },
   {
     id: "jp-4",
-    title: "RKS",
+    title: "Waste Management Platform",
     company: "Quadleo Techno Solutions",
     role: "UI UX Designer",
     year: "2024",
     image: rks,
-    description: "RKS is a comprehensive waste management application designed to digitize and streamline waste collection operations for municipalities and service providers. The platform connects administrators, customers, field agents, and drivers through a unified system to improve operational efficiency, service transparency, and user engagement.",
-    overview: "The RKS platform was designed as a multi-role ecosystem consisting of an Admin Web App and multiple mobile applications for customers, agents, and drivers. The system supports end-to-end waste management workflows—from service requests and task assignments to collection tracking and real-time updates. The UI/UX design emphasizes simplicity, accessibility, and efficient task execution across all user roles.",
+    description: "This is a comprehensive waste management application designed to digitize and streamline waste collection operations for municipalities and service providers. The platform connects administrators, customers, field agents, and drivers through a unified system to improve operational efficiency, service transparency, and user engagement.",
+    overview: "This platform was designed as a multi-role ecosystem consisting of an Admin Web App and multiple mobile applications for customers, agents, and drivers. The system supports end-to-end waste management workflows—from service requests and task assignments to collection tracking and real-time updates. The UI/UX design emphasizes simplicity, accessibility, and efficient task execution across all user roles.",
     deliverables: ['UI/UX design for Admin Web App, Customer Mobile App, Agent Mobile App, and Driver Mobile App', 'Role-based user flows and journey maps', 'Low-fidelity and high-fidelity wireframes', 'Interactive prototypes for key workflows', 'Accessible and responsive UI components', 'Design system and developer handoff assets'],
     challenge: "The key challenge was designing a complex, multi-role operational system that could support real-time coordination between administrators, field agents, drivers, and customers while maintaining a simple and intuitive user experience. Balancing operational control with ease of use, ensuring accessibility across diverse user groups, and minimizing friction in time-sensitive workflows such as task assignment, navigation, and collection tracking were critical challenges.",
     approach: "A user-centered, workflow-driven approach was adopted to understand real-world waste management operations and user expectations. The design focused on reducing task complexity, improving visibility of service status, and creating consistent UI patterns across web and mobile platforms.",
@@ -229,7 +232,7 @@ export const JOB_PROJECTS: JobProject[] = [
     ],
     solution: "The final solution delivered an integrated waste management platform that improved coordination and transparency across all roles. Administrators gained better operational visibility and control, customers could easily request and track waste collection, agents efficiently coordinated tasks, and drivers received clear schedules and navigation support. The design enhanced service reliability, user engagement, and overall operational efficiency.",
     links: {
-      web: "https://healthtrack-example.com",
+      // web: "https://healthtrack-example.com",
       ios: "https://apps.apple.com/us/app/healthtrack",
       android: "https://play.google.com/store/apps/details?id=com.healthtrack"
     }

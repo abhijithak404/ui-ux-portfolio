@@ -9,6 +9,7 @@ export interface Project {
   technologies: string[];
   link?: string;
   figma?: string;
+  behance?: string;
   challenge: string;
   solution: string;
 }
@@ -32,6 +33,7 @@ export interface JobProject {
     ios?: string;
     android?: string;
     figma?: string;
+    behance?: string;
   };
 }
 
