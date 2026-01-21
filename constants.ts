@@ -3,9 +3,10 @@ import { Project, Experience, Education, JobProject } from './types';
 // Please ensure these files exist in your 'assets' folder
 import projectNovaThumb from './Assets/image1.png';
 
-import dopack_img1 from '../Assets/DoPack-img1.webp';
-import dopack_img2 from '../Assets/DoPack-img2.webp';
-import dopack_thumb from '../Assets/dopack.webp';
+import dopack_img1 from './Assets/DoPack-img1.webp';
+import dopack_img2 from './Assets/DoPack-img2.webp';
+import dopack_thumb from './Assets/dopack.webp';
+
 
 export const SOCIAL_LINKS = {
   github: "https://github.com",
