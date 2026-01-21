@@ -16,7 +16,7 @@ import secondvahan from '../Assets/2ndvahan.webp';
 import billerq_cabletv from '../Assets/BillerQ-CableTV_CRM.webp';
 import billerq_watercrm from '../Assets/BillerQ-WaterCRM.webp';
 
-import education from '../Assets/Education.png';
+import education from '../Assets/education.png';
 import eduspark_img1 from '../Assets/eduspark-folio-img1.webp';
 import eduspark_img2 from '../Assets/eduspark-folio-img2.png';
 import eduspark_thumb from '../Assets/eduspark.webp';
@@ -517,7 +517,7 @@ export const Home: React.FC = () => {
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden relative shadow-2xl">
               <img
-                src="Assets/Education.png"
+                src={education}
                 alt="Education"
                 className="w-full h-full object-cover"
               />
