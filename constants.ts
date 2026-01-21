@@ -256,7 +256,7 @@ export const JOB_PROJECTS: JobProject[] = [
   //     ios: "https://apps.apple.com/us/app/healthtrack",
   //     android: "https://play.google.com/store/apps/details?id=com.healthtrack"
   //   }
-  }
+  // }
 ];
 
 export const EXPERIENCE: Experience[] = [
