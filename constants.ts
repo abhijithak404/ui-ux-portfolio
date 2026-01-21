@@ -85,16 +85,13 @@ export const PROJECTS: Project[] = [
     title: "GameCore",
     category: "Mobile Application",
     summary: "A bold, futuristic e-commerce app that blends immersive visuals with a seamless shopping experience.",
-    description: "Gamecore is a concept project focused on designing a modern e-commerce app for gaming products. The goal was to combine a futuristic visual style with an effortless shopping journey for players.",
-    thumbnail: "Assets/gamecore.webp",
-    images: [
-      "Assets/gamecoe-img1.png",
-      "Assets/gamecoe-img2.png"
-    ],
+    description: "Gamecore is a concept project focused on designing a modern e-commerce app for gaming products.",
+    thumbnail: gamecoreThumb,
+    images: [gamecoreImg1, gamecoreImg2],
     technologies: ["Figma", "Photoshop", "Illustrator"],
-    figma: "https://www.figma.com/design/xYAbDBHJYt4YAUpDJHVPA3/GameCore?node-id=0-1&t=DT4UVJVfU3DTfXmV-1",
-    challenge: "To design a visually striking interface that reflects gaming culture while keeping the e-commerce experience intuitive and fast. Balancing style with usability was key.",
-    solution: "The solution focused on creating a visually engaging yet highly functional shopping experience. A dark, futuristic theme with neon accents was combined with clear layouts and intuitive navigation, ensuring users could explore and purchase products effortlessly. Every interaction was designed to feel smooth, responsive, and true to the energy of gaming culture."
+    figma: "https://www.figma.com/design/xYAbDBHJYt4YAUpDJHVPA3/GameCore",
+    challenge: "...",
+    solution: "..."
   },
   {
     id: "travel-app",
