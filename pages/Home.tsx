@@ -16,7 +16,7 @@ import secondvahan from '../Assets/2ndvahan.webp';
 import billerq_cabletv from '../Assets/BillerQ-CableTV_CRM.webp';
 import billerq_watercrm from '../Assets/BillerQ-WaterCRM.webp';
 
-import education from '../Assets/education.png';
+import education from '../Assets/Education.png';
 import eduspark_img1 from '../Assets/eduspark-folio-img1.webp';
 import eduspark_img2 from '../Assets/eduspark-folio-img2.png';
 import eduspark_thumb from '../Assets/eduspark.webp';
@@ -318,7 +318,6 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
 
       {/* Services Section */}
       <div id="services" className="py-20 px-4 md:px-8 max-w-[1440px] mx-auto">
