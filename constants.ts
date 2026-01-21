@@ -11,9 +11,9 @@ import eduspark_img1 from './Assets/eduspark-folio-img1.webp';
 import eduspark_img2 from './Assets/eduspark-folio-img2.png';
 import eduspark_thumb from './Assets/eduspark.webp';
 
-import gamecoreImg1 from "../Assets/gamecoe-img1.png";
-import gamecoreImg2 from "../Assets/gamecoe-img2.png";
-import gamecoreThumb from "../Assets/gamecore.webp";
+import gamecoreImg1 from "./Assets/gamecoe-img1.png";
+import gamecoreImg2 from "./Assets/gamecoe-img2.png";
+import gamecoreThumb from "./Assets/gamecore.webp";
 
 
 export const SOCIAL_LINKS = {
