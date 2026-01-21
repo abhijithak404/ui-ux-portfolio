@@ -109,7 +109,7 @@ export const PROJECTS: Project[] = [
     ],
     technologies: ["Figma", "Photoshop", "Illustrator"],
     figma: "https://www.figma.com/design/xYAbDBHJYt4YAUpDJHVPA3/GameCore?node-id=0-1&t=DT4UVJVfU3DTfXmV-1",
-    behance: "https://www.behance.net/gallery/example/nova",
+    behance: "https://www.behance.net/gallery/232587929/Gamecore-Gaming-E-Commerce-App-UIUX-Design",
     challenge: "To design a visually striking interface that reflects gaming culture while keeping the e-commerce experience intuitive and fast. Balancing style with usability was key.",
     solution: "The solution focused on creating a visually engaging yet highly functional shopping experience. A dark, futuristic theme with neon accents was combined with clear layouts and intuitive navigation, ensuring users could explore and purchase products effortlessly. Every interaction was designed to feel smooth, responsive, and true to the energy of gaming culture."
   },
