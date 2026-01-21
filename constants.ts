@@ -142,13 +142,13 @@ export const PROJECTS: Project[] = [
 export const JOB_PROJECTS: JobProject[] = [
   {
     id: "jp-1",
-    title: "BillerQ - Cable TV CRM",
+    title: "Cable TV CRM",
     company: "Quadleo Techno Solutions",
     role: "UI UX Designer",
     year: "2024",
     image: billerq_cabletv,
-    description: "BillerQ – Cable TV CRM is a comprehensive customer and service management platform built for cable TV and broadband operators. The system includes multiple role-based applications designed to simplify subscription management, billing, payments, and customer support workflows while improving operational efficiency and user satisfaction.",
-    overview: "BillerQ was designed as an all-in-one CRM ecosystem serving customers, agents, and support teams. The platform focuses on reducing manual work, improving response times for complaints, and providing users with a seamless experience across mobile applications. The UI/UX design emphasizes clarity, speed, and ease of use for both end customers and operational staff.",
+    description: "Cable TV CRM is a comprehensive customer and service management platform built for cable TV and broadband operators. The system includes multiple role-based applications designed to simplify subscription management, billing, payments, and customer support workflows while improving operational efficiency and user satisfaction.",
+    overview: "This CRM was designed as an all-in-one CRM ecosystem serving customers, agents, and support teams. The platform focuses on reducing manual work, improving response times for complaints, and providing users with a seamless experience across mobile applications. The UI/UX design emphasizes clarity, speed, and ease of use for both end customers and operational staff.",
     deliverables: ['End-to-end UI/UX design for 3 mobile applications', 'Low-fidelity and high-fidelity wireframes', 'Interactive prototypes for key user flows', 'Design system (colors, typography, components)', 'User journey maps and task flows', 'Developer-ready UI screens'],
     challenge: "The primary challenge was designing a multi-app CRM ecosystem that served different user roles—customers, agents, and support teams—while maintaining a consistent and intuitive experience across all platforms. The system needed to simplify complex billing, subscription, and complaint workflows for non-technical users, reduce task completion time for agents managing high customer volumes, and ensure clarity and ease of navigation without overwhelming users with operational complexity.",
     approach: "A user-centered design approach was followed to understand real-world usage patterns of customers, agents, and support staff. The focus was on minimizing cognitive load, reducing steps in critical flows, and creating a scalable UI system that could grow with future features.",
@@ -158,20 +158,20 @@ export const JOB_PROJECTS: JobProject[] = [
     ],
     solution: "The final solution delivered a unified, intuitive CRM experience across customer, complaint, and agent applications. Customers gained easy control over subscriptions and payments, agents could manage accounts and service requests efficiently, and support teams benefited from streamlined complaint handling. The result was a scalable, user-friendly design system that improved operational workflows and enhanced overall user experience.",
     links: {
-      web: "https://billerq.com",
+      // web: "https://billerq.com",
       // ios: "https://apps.apple.com/us/app/healthtrack",
       android: "https://play.google.com/store/apps/details?id=com.quadleo.billerq&pcampaignid=web_share"
     }
   },
   {
     id: "jp-2",
-    title: "2ndvahan.com",
+    title: "Used Vehicles Selling Platform",
     company: "Quadleo Techno Solutions",
     role: "UI UX Designer",
     year: "2024",
     image: secondvahan,
-    description: "2nd Vahan is a digital used-vehicle selling platform that connects customers, dealerships, and internal teams through a unified multi-platform system. The platform streamlines vehicle listing, inspection, approval, and sales processes while providing customers with an easy and transparent way to browse and inquire about used vehicles.",
-    overview: "2nd Vahan was designed as an end-to-end vehicle marketplace with role-based applications for administrators, staff, and customers. The focus of the UI/UX design was to simplify complex operational workflows, ensure data accuracy across platforms, and deliver a smooth browsing experience for customers. The design emphasizes trust, clarity, and ease of navigation across web and mobile interfaces.",
+    description: "This is a digital used-vehicle selling platform that connects customers, dealerships, and internal teams through a unified multi-platform system. The platform streamlines vehicle listing, inspection, approval, and sales processes while providing customers with an easy and transparent way to browse and inquire about used vehicles.",
+    overview: "This app was designed as an end-to-end vehicle marketplace with role-based applications for administrators, staff, and customers. The focus of the UI/UX design was to simplify complex operational workflows, ensure data accuracy across platforms, and deliver a smooth browsing experience for customers. The design emphasizes trust, clarity, and ease of navigation across web and mobile interfaces.",
     deliverables: ['UI/UX design for Admin Web App, Staff Mobile App, and Customer Mobile App', 'User research insights and role-based user flows', 'Low-fidelity and high-fidelity wireframes', 'Interactive prototypes for key workflows', 'Responsive and accessible UI components', 'Design handoff assets for development'],
     challenge: "The main challenge was designing a scalable multi-platform system that supported different user roles while maintaining consistency across web and mobile experiences. The platform needed to manage complex processes such as vehicle inspections, approvals, pricing, and dealer coordination, while keeping the customer journey simple and trustworthy. Balancing operational efficiency for staff and admins with an intuitive browsing and inquiry experience for customers was critical.",
     approach: "A research-driven, collaborative design approach was followed to understand dealership operations, staff workflows, and customer expectations. The design process focused on reducing friction in critical tasks, improving clarity in vehicle information, and ensuring accessibility and responsiveness across devices.",
@@ -181,7 +181,7 @@ export const JOB_PROJECTS: JobProject[] = [
     ],
     solution: "The final solution delivered a cohesive used-vehicle marketplace experience across admin, staff, and customer platforms. Administrators gained efficient tools to manage listings and transactions, staff could perform inspections and approvals seamlessly, and customers enjoyed a clean, intuitive interface for discovering vehicles and connecting with dealerships. The design improved operational clarity, reduced workflow friction, and enhanced overall user trust and engagement.",
     links: {
-      web: "2ndvahan.com",
+      // web: "2ndvahan.com",
       ios: "https://apps.apple.com/us/app/healthtrack",
       android: "https://play.google.com/store/apps/details?id=com.quadleo.secondvahanstaff&pcampaignid=web_share"
       // android: "https://play.google.com/store/apps/details?id=com.secondvahan.dealer&pcampaignid=web_share"
