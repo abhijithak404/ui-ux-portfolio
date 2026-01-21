@@ -11,6 +11,10 @@ import eduspark_img1 from './Assets/eduspark-folio-img1.webp';
 import eduspark_img2 from './Assets/eduspark-folio-img2.png';
 import eduspark_thumb from './Assets/eduspark.webp';
 
+import gamecoreImg1 from "../Assets/gamecoe-img1.png";
+import gamecoreImg2 from "../Assets/gamecoe-img2.png";
+import gamecoreThumb from "../Assets/gamecore.webp";
+
 
 export const SOCIAL_LINKS = {
   github: "https://github.com",
@@ -91,10 +95,9 @@ export const PROJECTS: Project[] = [
     category: "Mobile Application",
     summary: "A bold, futuristic e-commerce app that blends immersive visuals with a seamless shopping experience.",
     description: "Gamecore is a concept project focused on designing a modern e-commerce app for gaming products. The goal was to combine a futuristic visual style with an effortless shopping journey for players.",
-    thumbnail: "Assets/gamecore.webp",
+    thumbnail: gamecoreThumb,
     images: [
-      "Assets/gamecoe-img1.png",
-      "Assets/gamecoe-img2.png"
+      gamecoreImg1, gamecoreImg2
     ],
     technologies: ["Figma", "Photoshop", "Illustrator"],
     figma: "https://www.figma.com/design/xYAbDBHJYt4YAUpDJHVPA3/GameCore?node-id=0-1&t=DT4UVJVfU3DTfXmV-1",

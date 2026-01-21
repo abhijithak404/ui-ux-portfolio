@@ -19,9 +19,7 @@ import billerq_watercrm from '../Assets/BillerQ-WaterCRM.webp';
 import education from '../Assets/Education.png';
 
 import essar from '../Assets/ESSAR.webp';
-import gamecoreImg1 from "../Assets/gamecoe-img1.png";
-import gamecoreImg2 from "../Assets/gamecoe-img2.png";
-import gamecoreThumb from "../Assets/gamecore.webp";
+
 import rks from '../Assets/RKS.webp';
 
 
