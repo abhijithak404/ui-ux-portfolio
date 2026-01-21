@@ -234,28 +234,28 @@ export const JOB_PROJECTS: JobProject[] = [
       android: "https://play.google.com/store/apps/details?id=com.healthtrack"
     }
   },
-  {
-    id: "jp-5",
-    title: "Quadleo Techno Solutions",
-    company: "Freelance",
-    role: "UI UX Designer",
-    year: "2025",
-    image: "Assets/BillerQ-WaterCRM.webp",
-    description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
-    overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
-    deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
-    challenge: "The primary objective was to modernize the existing platform while ensuring zero disruption to the user base. We faced specific challenges regarding data visualization complexity and mobile responsiveness. The legacy system was cluttered, leading to patient anxiety.",
-    approach: "As the Lead Designer, I initiated the process with a deep dive into user analytics and stakeholder interviews. We conducted workshops with doctors and patients to align business goals with user needs.",
-    approachSteps: [
-      { number: "01", title: "Discovery", description: "Understanding the core problems through research and patient interviews." },
-      { number: "02", title: "Ideation", description: "Wireframing and prototyping multiple solutions with a mobile-first mindset." }
-    ],
-    solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system.",
-    links: {
-      web: "https://healthtrack-example.com",
-      ios: "https://apps.apple.com/us/app/healthtrack",
-      android: "https://play.google.com/store/apps/details?id=com.healthtrack"
-    }
+  // {
+  //   id: "jp-5",
+  //   title: "Quadleo Techno Solutions Website",
+  //   company: "Quadleo Techno Solutions",
+  //   role: "UI UX Designer",
+  //   year: "2025",
+  //   image: "Assets/BillerQ-WaterCRM.webp",
+  //   description: "Redesigned the patient portal for a major healthcare provider, improving accessibility scores by 40%.",
+  //   overview: "Detailed insights into the design process, challenges faced, and the solutions implemented during my tenure at TechFlow Solutions. We aimed to bridge the gap between complex medical data and patient understanding.",
+  //   deliverables: ['User Interface Design', 'Experience Strategy', 'Interactive Prototypes', 'Accessibility Audit'],
+  //   challenge: "The primary objective was to modernize the existing platform while ensuring zero disruption to the user base. We faced specific challenges regarding data visualization complexity and mobile responsiveness. The legacy system was cluttered, leading to patient anxiety.",
+  //   approach: "As the Lead Designer, I initiated the process with a deep dive into user analytics and stakeholder interviews. We conducted workshops with doctors and patients to align business goals with user needs.",
+  //   approachSteps: [
+  //     { number: "01", title: "Discovery", description: "Understanding the core problems through research and patient interviews." },
+  //     { number: "02", title: "Ideation", description: "Wireframing and prototyping multiple solutions with a mobile-first mindset." }
+  //   ],
+  //   solution: "We delivered a robust solution that improved key metrics. The new interface streamlined workflows, reducing the average time-to-task by significant margins. Feedback from the users highlighted the improved clarity and aesthetic appeal of the new design system.",
+  //   links: {
+  //     web: "https://healthtrack-example.com",
+  //     ios: "https://apps.apple.com/us/app/healthtrack",
+  //     android: "https://play.google.com/store/apps/details?id=com.healthtrack"
+  //   }
   }
 ];
 
