@@ -23,6 +23,8 @@ import rks from './Assets/RKS.webp';
 
 import abhilash from './Assets/Abhilash.jpeg';
 import ashiqu from './Assets/Ashiqu.jpeg';
+import abhinand from './Assets/abhinand.jpg';
+
 
 export const SOCIAL_LINKS = {
   github: "https://github.com",
@@ -80,7 +82,7 @@ export const TESTIMONIALS = [
     quote: "I had the opportunity to work closely with Abhijith, where he focused on UI/UX design and I handled frontend development. His designs consistently made development seamless, as they were well-structured, practical, and highly user-friendly. He brings a strong creative vision, attention to detail, and a collaborative mindset that makes working with him both productive and enjoyable.",
     author: "Abhinand PK",
     role: "React Developer, Quadleo Techno Solutions",
-    image: "https://randomuser.me/api/portraits/men/32.jpg"
+    image: abhinand
   },
   {
     quote: "Abhijith AK is a highly talented UI/UX designer with a knack for creating simple, minimal, and user-friendly designs. His work carries a professional touch, ensuring a seamless experience for users while maintaining clean aesthetics. With a strong understanding of usability and functionality, he consistently delivers designs that are both visually appealing and intuitive. His ability to blend creativity with practicality makes him a valuable asset in any design team.",
@@ -139,7 +141,7 @@ export const PROJECTS: Project[] = [
     ],
     technologies: ["Figma", "Photoshop", "Illustrator"],
     figma: "https://www.figma.com/design/Z4Aiv4TVx10JTa6Pp59Vu6/Untitled?node-id=0-1&p=f&t=yJtgFnz8YrSIsVCW-0",
-    behance: "https://www.behance.net/gallery/example/nova",
+    behance: "https://www.behance.net/gallery/exa mple/nova",
     challenge: "Design a learning platform that presents a wide variety of courses without overwhelming users, while ensuring a smooth flow from discovery to certification. The experience needed to stay intuitive, engaging, and easy to navigate for learners of all levels.",
     solution: "I designed Eduspark with a clear, learner-focused interface that simplifies course exploration and makes learning sessions smooth and distraction-free. The visual hierarchy, clean navigation, and structured layouts help users quickly find courses, track their progress, and earn certificates with ease."
   }
