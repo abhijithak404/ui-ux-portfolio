@@ -162,7 +162,7 @@ export const Navbar: React.FC = () => {
               </button>
             ))}
             <a
-              href="Assets/Abhijith-Ak-Resume.pdf"
+              href="Assets/UI-UX-DESIGNER-ABHIJITH-AK.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 mx-auto inline-flex items-center gap-2 px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full font-bold text-lg"
